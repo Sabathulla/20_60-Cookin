@@ -1,0 +1,2145 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>20_60 COOKIN — Enlightening Marketing &amp; P&amp;L Tutor</title>
+  <meta name="description" content="20_60 Cookin — Interactive tutor for Meta Ads, Google Ads, TikTok Business, SEO, Social-First, Traditional Marketing, and P&L Management." />
+  <meta property="og:title" content="20_60 COOKIN — Marketing & P&L Tutor" />
+  <meta property="og:description" content="High-key enlightening. Learn Meta Ads, Google Ads, TikTok Business, SEO, Social-First, Traditional Marketing, and P&L Management." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230d0c0b'/%3E%3Crect x='3' y='3' width='58' height='58' rx='13' fill='none' stroke='%23c6a76e' stroke-width='2'/%3E%3Ctext x='32' y='39' text-anchor='middle' font-family='Georgia,serif' font-size='22' fill='%23f2ede4'%3E20%3C/text%3E%3Ccircle cx='50' cy='14' r='4.5' fill='%23d71921'/%3E%3C/svg%3E" />
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+  <style>
+    :root {
+      --font-serif: "Didot", "Bodoni MT", "Palatino Linotype", Georgia, "Times New Roman", serif;
+      --font-mono: "SFMono-Regular", ui-monospace, Menlo, Monaco, Consolas, monospace;
+      --font-sans: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+
+      /* Nocturne Atelier (Default: Obsidian + Ivory + Antique Brass + Nothing Crimson) */
+      --bg-canvas: #0d0c0b;
+      --bg-surface: #141311;
+      --bg-elevated: #1b1916;
+      --bg-hover: #24211d;
+      --border-hairline: #2c2823;
+      --border-strong: #403930;
+      --text-primary: #f2ede4;
+      --text-secondary: #a1998d;
+      --text-muted: #6e675e;
+      --accent-gold: #c6a76e;
+      --accent-gold-soft: rgba(198, 167, 110, 0.12);
+      --accent-gold-border: rgba(198, 167, 110, 0.38);
+      --accent-red: #d71921;
+      --accent-olive: #7aa384;
+      --accent-olive-soft: rgba(122, 163, 132, 0.14);
+      --accent-red-soft: rgba(215, 25, 33, 0.14);
+      --dot-color: rgba(198, 167, 110, 0.11);
+      --user-bubble-bg: #23201b;
+      --user-bubble-border: #4a4033;
+      --chart-grid: rgba(242, 237, 228, 0.07);
+      --chart-tick: #a1998d;
+    }
+
+    html[data-theme="light"] {
+      /* Alabaster Atelier (Warm Travertine Parchment + Espresso + Antique Bronze + Nothing Crimson) */
+      --bg-canvas: #f3efe6;
+      --bg-surface: #faf7f1;
+      --bg-elevated: #eee9de;
+      --bg-hover: #e5dfd1;
+      --border-hairline: #dcd4c5;
+      --border-strong: #bfb4a0;
+      --text-primary: #171512;
+      --text-secondary: #5c554b;
+      --text-muted: #8a8174;
+      --accent-gold: #8c6d3b;
+      --accent-gold-soft: rgba(140, 109, 59, 0.10);
+      --accent-gold-border: rgba(140, 109, 59, 0.36);
+      --accent-red: #d71921;
+      --accent-olive: #3f6b4b;
+      --accent-olive-soft: rgba(63, 107, 75, 0.12);
+      --accent-red-soft: rgba(215, 25, 33, 0.10);
+      --dot-color: rgba(23, 21, 18, 0.08);
+      --user-bubble-bg: #181613;
+      --user-bubble-border: #181613;
+      --chart-grid: rgba(23, 21, 18, 0.08);
+      --chart-tick: #5c554b;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg-canvas);
+      color: var(--text-primary);
+      background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
+      background-size: 18px 18px;
+      overflow: hidden;
+      transition: background-color 0.25s ease, color 0.25s ease;
+    }
+
+    .font-serif-classic {
+      font-family: var(--font-serif);
+    }
+
+    .font-mono-tech {
+      font-family: var(--font-mono);
+    }
+
+    .surface-panel {
+      background-color: var(--bg-surface);
+      border-color: var(--border-hairline);
+    }
+
+    .surface-elevated {
+      background-color: var(--bg-elevated);
+      border-color: var(--border-hairline);
+    }
+
+    .classical-frame {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-hairline);
+      box-shadow: inset 0 0 0 1px rgba(198, 167, 110, 0.06);
+    }
+
+    .btn-tactile {
+      background-color: var(--bg-elevated);
+      border: 1px solid var(--border-hairline);
+      color: var(--text-primary);
+      transition: all 0.16s ease;
+    }
+    .btn-tactile:hover {
+      border-color: var(--accent-gold);
+      background-color: var(--bg-hover);
+    }
+    .btn-tactile:active {
+      transform: scale(0.98);
+    }
+
+    .btn-brass {
+      background-color: var(--accent-gold);
+      color: #0d0c0b;
+      border: 1px solid var(--accent-gold);
+      transition: all 0.16s ease;
+    }
+    .btn-brass:hover {
+      filter: brightness(1.08);
+    }
+    .btn-brass:active {
+      transform: scale(0.98);
+    }
+
+    .chat-scroll::-webkit-scrollbar,
+    .sidebar-scroll::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    .chat-scroll::-webkit-scrollbar-thumb,
+    .sidebar-scroll::-webkit-scrollbar-thumb {
+      background: var(--border-strong);
+      border-radius: 9999px;
+    }
+    .chat-scroll::-webkit-scrollbar-track,
+    .sidebar-scroll::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    @keyframes fadeSlideUp {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .msg-enter {
+      animation: fadeSlideUp 0.22s ease-out forwards;
+    }
+
+    @keyframes ledPulse {
+      0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(215, 25, 33, 0.55); }
+      50% { opacity: 0.72; box-shadow: 0 0 0 5px rgba(215, 25, 33, 0); }
+    }
+    .nothing-led {
+      background-color: var(--accent-red);
+      animation: ledPulse 2.4s infinite ease-in-out;
+    }
+
+    input[type="range"] {
+      -webkit-appearance: none;
+      appearance: none;
+      height: 4px;
+      background: var(--border-strong);
+      border-radius: 999px;
+      outline: none;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--accent-gold);
+      border: 2px solid var(--bg-surface);
+      cursor: pointer;
+    }
+    input[type="range"]::-moz-range-thumb {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--accent-gold);
+      border: 2px solid var(--bg-surface);
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body class="h-screen w-screen flex flex-col">
+
+  <!-- Mobile Sidebar Backdrop -->
+  <div id="sidebarBackdrop" class="fixed inset-0 bg-black/60 z-30 hidden lg:hidden backdrop-blur-xs"></div>
+
+  <!-- Symmetric Classical × Nothing Top Header -->
+  <header class="surface-panel border-b px-3 sm:px-6 py-2.5 grid grid-cols-3 items-center gap-2 shrink-0 z-20">
+    <!-- Left Zone: Menu + Active Track Context -->
+    <div class="flex items-center gap-2 min-w-0">
+      <button id="openSidebarBtn" type="button" class="lg:hidden btn-tactile p-2 rounded-full shrink-0" aria-label="Open curriculum index">
+        <i data-lucide="menu" class="w-4 h-4"></i>
+      </button>
+      <div class="hidden sm:flex items-center gap-2 min-w-0">
+        <span class="w-2 h-2 rounded-full nothing-led shrink-0"></span>
+        <div class="min-w-0">
+          <div id="activeTopicTitle" class="font-mono-tech text-[11px] uppercase tracking-[0.14em] truncate" style="color: var(--text-primary);">ALL TRACKS · I–VII</div>
+          <div id="activeTopicSubtitle" class="text-[11px] truncate" style="color: var(--text-muted);">Curriculum &amp; P&amp;L Advisory</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Center Zone: Symmetric Italian Monogram Crest -->
+    <div class="flex flex-col items-center justify-center text-center">
+      <div class="flex items-center gap-2">
+        <span class="hidden md:inline-block w-5 h-px" style="background: var(--accent-gold); opacity: 0.55;"></span>
+        <h1 class="font-serif-classic text-sm sm:text-base tracking-[0.22em] uppercase font-normal" style="color: var(--text-primary);">20_60 COOKIN</h1>
+        <span class="hidden md:inline-block w-5 h-px" style="background: var(--accent-gold); opacity: 0.55;"></span>
+      </div>
+      <div class="flex items-center gap-1.5 mt-0.5">
+        <span class="font-mono-tech text-[9px] uppercase tracking-[0.22em]" style="color: var(--accent-gold);">ENLIGHTENING · TUTOR OS</span>
+        <span id="activeStyleBadge" class="hidden sm:inline-block font-mono-tech text-[9px] uppercase tracking-[0.14em] px-1.5 py-0.5 rounded-full border" style="border-color: var(--accent-gold-border); color: var(--accent-gold); background: var(--accent-gold-soft);">PLAIN</span>
+      </div>
+    </div>
+
+    <!-- Right Zone: Symmetric Action Pills -->
+    <div class="flex items-center justify-end gap-1.5">
+      <button id="quickQuizBtn" type="button" class="btn-tactile inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-full font-mono-tech text-[10px] uppercase tracking-[0.12em]">
+        <i data-lucide="help-circle" class="w-3.5 h-3.5" style="color: var(--accent-gold);"></i>
+        <span class="hidden md:inline">Quiz</span>
+      </button>
+      <button id="quickScenarioBtn" type="button" class="btn-tactile inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-full font-mono-tech text-[10px] uppercase tracking-[0.12em]">
+        <i data-lucide="briefcase" class="w-3.5 h-3.5" style="color: var(--accent-gold);"></i>
+        <span class="hidden md:inline">Case</span>
+      </button>
+      <button id="themeToggleBtn" type="button" class="btn-tactile p-1.5 rounded-full" title="Toggle Nocturne / Alabaster theme" aria-label="Toggle theme">
+        <i id="themeIcon" data-lucide="sun" class="w-3.5 h-3.5" style="color: var(--accent-gold);"></i>
+      </button>
+      <button id="clearChatBtn" type="button" class="btn-tactile p-1.5 rounded-full" title="Clear conversation" aria-label="Clear conversation">
+        <i data-lucide="trash-2" class="w-3.5 h-3.5" style="color: var(--text-secondary);"></i>
+      </button>
+    </div>
+  </header>
+
+  <div class="flex flex-1 min-h-0 overflow-hidden">
+    <!-- Left Classical Architectural Sidebar -->
+    <aside id="sidebar" class="fixed lg:static inset-y-0 left-0 z-40 w-72 surface-panel border-r flex flex-col transform -translate-x-full lg:translate-x-0 transition-transform duration-200 ease-out">
+      <!-- Mobile Close Bar -->
+      <div class="lg:hidden px-4 py-3 border-b flex items-center justify-between" style="border-color: var(--border-hairline);">
+        <span class="font-serif-classic text-xs tracking-[0.2em] uppercase" style="color: var(--accent-gold);">CURRICULUM INDEX</span>
+        <button id="closeSidebarBtn" type="button" class="btn-tactile p-1.5 rounded-full" aria-label="Close sidebar">
+          <i data-lucide="x" class="w-3.5 h-3.5"></i>
+        </button>
+      </div>
+
+      <!-- Nothing-Style Dot-Matrix Mastery Gauge -->
+      <div class="px-4 py-3.5 border-b" style="border-color: var(--border-hairline);">
+        <div class="flex items-center justify-between mb-2">
+          <span class="font-mono-tech text-[10px] uppercase tracking-[0.18em]" style="color: var(--text-muted);">MASTERY MATRIX</span>
+          <span id="overallProgressPct" class="font-mono-tech text-xs font-bold" style="color: var(--accent-gold);">0%</span>
+        </div>
+        <!-- 21-Dot LED Matrix Bar -->
+        <div id="dotMatrixBar" class="grid grid-cols-7 gap-1.5 py-1"></div>
+        <div class="w-full h-px mt-2" style="background: var(--border-hairline);">
+          <div id="overallProgressBar" class="h-full transition-all duration-300" style="width: 0%; background: var(--accent-gold);"></div>
+        </div>
+        <div class="flex items-center justify-between mt-2 font-mono-tech text-[10px]" style="color: var(--text-secondary);">
+          <span id="lessonsDoneLabel">00 / 21 LESSONS</span>
+          <span id="quizScoreLabel" style="color: var(--accent-olive);">0 PTS</span>
+        </div>
+      </div>
+
+      <!-- Symmetric Depth Selector -->
+      <div class="px-4 py-3 border-b" style="border-color: var(--border-hairline);">
+        <div class="font-mono-tech text-[10px] uppercase tracking-[0.18em] text-center mb-2" style="color: var(--text-muted);">REGISTER · DEPTH</div>
+        <div id="styleToggleGroup" class="grid grid-cols-3 gap-1 p-1 rounded-full border" style="background: var(--bg-elevated); border-color: var(--border-hairline);">
+          <button type="button" data-style="plain" class="style-btn font-mono-tech text-[10px] uppercase tracking-[0.1em] py-1.5 rounded-full transition">Plain</button>
+          <button type="button" data-style="practitioner" class="style-btn font-mono-tech text-[10px] uppercase tracking-[0.1em] py-1.5 rounded-full transition">Tactical</button>
+          <button type="button" data-style="executive" class="style-btn font-mono-tech text-[10px] uppercase tracking-[0.1em] py-1.5 rounded-full transition">Exec</button>
+        </div>
+      </div>
+
+      <!-- Roman Numeral Track List (I – VII) -->
+      <div class="flex-1 overflow-y-auto sidebar-scroll px-3 py-3 space-y-1">
+        <div class="px-2 pb-1.5 font-mono-tech text-[10px] uppercase tracking-[0.18em] text-center" style="color: var(--text-muted);">DISCIPLINES · I — VII</div>
+        <div id="topicList" class="space-y-1"></div>
+      </div>
+
+      <!-- Bottom Symmetric Utility Dock -->
+      <div class="p-3.5 border-t space-y-2" style="border-color: var(--border-hairline);">
+        <button id="openPnlLabBtn" type="button" class="btn-brass w-full flex items-center justify-between px-3.5 py-2.5 rounded-full font-mono-tech text-[11px] font-semibold uppercase tracking-[0.12em]">
+          <span class="flex items-center gap-2"><i data-lucide="calculator" class="w-3.5 h-3.5"></i> P&amp;L Ledger Lab</span>
+          <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+        </button>
+        <div class="grid grid-cols-2 gap-2">
+          <button id="openNotesBtn" type="button" class="btn-tactile flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-full font-mono-tech text-[10px] uppercase tracking-[0.1em]">
+            <i data-lucide="bookmark" class="w-3 h-3" style="color: var(--accent-gold);"></i>
+            <span>Notes (<span id="notesCountBadge">0</span>)</span>
+          </button>
+          <button id="resetProgressBtn" type="button" class="btn-tactile flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-full font-mono-tech text-[10px] uppercase tracking-[0.1em]">
+            <i data-lucide="rotate-ccw" class="w-3 h-3" style="color: var(--accent-red);"></i>
+            <span>Reset</span>
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Centered Symmetric Reading & Dialogue Chamber -->
+    <main class="flex-1 flex flex-col min-w-0">
+      <!-- Chat Feed -->
+      <div id="chatFeed" class="flex-1 overflow-y-auto chat-scroll px-3 sm:px-6 py-6 space-y-5"></div>
+
+      <!-- Tactile Bottom Console -->
+      <div class="surface-panel border-t px-3 sm:px-6 py-3.5 shrink-0">
+        <div class="max-w-3xl mx-auto">
+          <div id="quickChipsRow" class="flex flex-wrap items-center justify-center gap-1.5 pb-2.5 mb-1.5"></div>
+          <form id="chatForm" class="flex items-end gap-2">
+            <div class="flex-1 relative">
+              <textarea
+                id="chatInput"
+                rows="1"
+                placeholder="Inquire on Meta, Google, TikTok, SEO, Social-First, Traditional, or P&L..."
+                class="w-full resize-none rounded-2xl border px-4 py-2.5 text-sm outline-none transition max-h-32"
+                style="background: var(--bg-elevated); border-color: var(--border-strong); color: var(--text-primary);"
+              ></textarea>
+            </div>
+            <button
+              id="sendBtn"
+              type="submit"
+              class="btn-brass h-10 px-5 rounded-full font-mono-tech text-[11px] font-bold uppercase tracking-[0.14em] flex items-center gap-1.5 shrink-0"
+            >
+              <span class="hidden sm:inline">Transmit</span>
+              <i data-lucide="arrow-up" class="w-4 h-4"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Interactive P&L Ledger Lab Modal -->
+  <div id="pnlModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/75 backdrop-blur-xs p-3 sm:p-5">
+    <div class="classical-frame rounded-3xl shadow-2xl w-full max-w-4xl max-h-[92vh] flex flex-col overflow-hidden">
+      <!-- Symmetric Modal Header -->
+      <div class="px-5 py-4 border-b grid grid-cols-3 items-center" style="border-color: var(--border-hairline); background: var(--bg-elevated);">
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full nothing-led"></span>
+          <span class="font-mono-tech text-[10px] uppercase tracking-[0.16em]" style="color: var(--text-muted);">LIVE LEDGER</span>
+        </div>
+        <div class="text-center">
+          <h3 class="font-serif-classic text-sm sm:text-base tracking-[0.18em] uppercase" style="color: var(--text-primary);">20_60 P&amp;L LEDGER</h3>
+        </div>
+        <div class="flex items-center justify-end gap-2">
+          <div class="flex rounded-full p-0.5 border font-mono-tech text-[10px]" style="background: var(--bg-surface); border-color: var(--border-hairline);">
+            <button type="button" data-currency="USD" class="currency-btn px-2.5 py-1 rounded-full transition">USD</button>
+            <button type="button" data-currency="AED" class="currency-btn px-2.5 py-1 rounded-full transition">AED</button>
+          </div>
+          <button id="closePnlModalBtn" type="button" class="btn-tactile p-1.5 rounded-full" aria-label="Close P&amp;L Lab">
+            <i data-lucide="x" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="flex-1 overflow-y-auto p-4 sm:p-6 grid grid-cols-1 lg:grid-cols-12 gap-5">
+        <!-- Sliders -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="rounded-2xl p-4 border space-y-4" style="background: var(--bg-elevated); border-color: var(--border-hairline);">
+            <div>
+              <div class="flex justify-between font-mono-tech text-[11px] mb-1.5">
+                <label for="pnlAdSpend" style="color: var(--text-secondary);">MONTHLY AD SPEND</label>
+                <span id="pnlAdSpendVal" style="color: var(--accent-gold);">$20,000</span>
+              </div>
+              <input id="pnlAdSpend" type="range" min="2000" max="150000" step="1000" value="20000" class="w-full" />
+            </div>
+
+            <div>
+              <div class="flex justify-between font-mono-tech text-[11px] mb-1.5">
+                <label for="pnlMer" style="color: var(--text-secondary);">BLENDED ROAS (MER)</label>
+                <span id="pnlMerVal" style="color: var(--accent-gold);">3.5x</span>
+              </div>
+              <input id="pnlMer" type="range" min="1.0" max="8.0" step="0.1" value="3.5" class="w-full" />
+              <p class="font-mono-tech text-[10px] mt-1" style="color: var(--text-muted);">Total Revenue ÷ Total Ad Spend</p>
+            </div>
+
+            <div>
+              <div class="flex justify-between font-mono-tech text-[11px] mb-1.5">
+                <label for="pnlCogs" style="color: var(--text-secondary);">PRODUCT COST (COGS %)</label>
+                <span id="pnlCogsVal" style="color: var(--text-primary);">35%</span>
+              </div>
+              <input id="pnlCogs" type="range" min="5" max="75" step="1" value="35" class="w-full" />
+            </div>
+
+            <div>
+              <div class="flex justify-between font-mono-tech text-[11px] mb-1.5">
+                <label for="pnlVar" style="color: var(--text-secondary);">SHIPPING &amp; FEES (%)</label>
+                <span id="pnlVarVal" style="color: var(--text-primary);">12%</span>
+              </div>
+              <input id="pnlVar" type="range" min="2" max="35" step="1" value="12" class="w-full" />
+            </div>
+
+            <div>
+              <div class="flex justify-between font-mono-tech text-[11px] mb-1.5">
+                <label for="pnlFixed" style="color: var(--text-secondary);">FIXED OVERHEAD</label>
+                <span id="pnlFixedVal" style="color: var(--text-primary);">$12,000</span>
+              </div>
+              <input id="pnlFixed" type="range" min="0" max="80000" step="1000" value="12000" class="w-full" />
+            </div>
+          </div>
+
+          <button id="diagnosePnlBtn" type="button" class="btn-brass w-full py-3 px-4 rounded-full font-mono-tech text-[11px] font-bold uppercase tracking-[0.14em] flex items-center justify-center gap-2">
+            <i data-lucide="message-square-text" class="w-4 h-4"></i>
+            <span>Diagnose This Ledger</span>
+          </button>
+        </div>
+
+        <!-- Readouts & Chart -->
+        <div class="lg:col-span-7 space-y-4">
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 text-center">
+            <div class="rounded-2xl p-3 border" style="background: var(--bg-elevated); border-color: var(--border-hairline);">
+              <div class="font-mono-tech text-[9px] uppercase tracking-[0.14em]" style="color: var(--text-muted);">NET REVENUE</div>
+              <div id="kpiRev" class="font-mono-tech text-sm font-bold mt-1" style="color: var(--text-primary);">$70,000</div>
+            </div>
+            <div class="rounded-2xl p-3 border" style="background: var(--bg-elevated); border-color: var(--border-hairline);">
+              <div class="font-mono-tech text-[9px] uppercase tracking-[0.14em]" style="color: var(--text-muted);">GROSS MARGIN</div>
+              <div id="kpiGm" class="font-mono-tech text-sm font-bold mt-1" style="color: var(--text-primary);">65.0%</div>
+            </div>
+            <div class="rounded-2xl p-3 border" style="background: var(--bg-elevated); border-color: var(--accent-gold-border);">
+              <div class="font-mono-tech text-[9px] uppercase tracking-[0.14em]" style="color: var(--accent-gold);">BREAK-EVEN</div>
+              <div id="kpiBeRoas" class="font-mono-tech text-sm font-bold mt-1" style="color: var(--accent-gold);">1.89x</div>
+            </div>
+            <div id="kpiNetCard" class="rounded-2xl p-3 border" style="background: var(--accent-olive-soft); border-color: var(--accent-olive);">
+              <div class="font-mono-tech text-[9px] uppercase tracking-[0.14em]" style="color: var(--accent-olive);">NET PROFIT</div>
+              <div id="kpiNet" class="font-mono-tech text-sm font-bold mt-1" style="color: var(--accent-olive);">$5,100</div>
+            </div>
+          </div>
+
+          <div class="rounded-2xl p-3.5 border" style="background: var(--bg-elevated); border-color: var(--border-hairline);">
+            <div class="font-mono-tech text-[10px] uppercase tracking-[0.16em] text-center mb-2" style="color: var(--text-muted);">WATERFALL DISTRIBUTION</div>
+            <div class="relative h-56">
+              <canvas id="pnlChart"></canvas>
+            </div>
+          </div>
+
+          <div id="pnlSummaryTable" class="rounded-2xl p-3.5 border font-mono-tech text-[11px] space-y-1.5" style="background: var(--bg-elevated); border-color: var(--border-hairline);"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Saved Study Notes Modal -->
+  <div id="notesModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/75 backdrop-blur-xs p-3 sm:p-5">
+    <div class="classical-frame rounded-3xl shadow-2xl w-full max-w-2xl max-h-[85vh] flex flex-col overflow-hidden">
+      <div class="px-5 py-4 border-b grid grid-cols-3 items-center" style="border-color: var(--border-hairline); background: var(--bg-elevated);">
+        <div class="flex items-center gap-2">
+          <i data-lucide="bookmark" class="w-3.5 h-3.5" style="color: var(--accent-gold);"></i>
+          <span class="font-mono-tech text-[10px] uppercase tracking-[0.14em]" style="color: var(--text-muted);">ARCHIVE</span>
+        </div>
+        <h3 class="font-serif-classic text-sm tracking-[0.18em] uppercase text-center" style="color: var(--text-primary);">STUDY FOLIO</h3>
+        <div class="flex items-center justify-end gap-1.5">
+          <button id="copyAllNotesBtn" type="button" class="btn-tactile px-3 py-1 rounded-full font-mono-tech text-[10px] uppercase tracking-[0.1em]">Copy All</button>
+          <button id="closeNotesModalBtn" type="button" class="btn-tactile p-1.5 rounded-full" aria-label="Close notes">
+            <i data-lucide="x" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+      <div id="notesListContainer" class="flex-1 overflow-y-auto p-4 sm:p-5 space-y-3"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-5 right-5 z-50 hidden items-center gap-2 rounded-full border px-4 py-2 font-mono-tech text-[11px] uppercase tracking-[0.12em] shadow-xl" style="background: var(--bg-surface); border-color: var(--accent-gold); color: var(--text-primary);">
+    <span class="w-2 h-2 rounded-full nothing-led"></span>
+    <span id="toastText">Saved</span>
+  </div>
+
+  <script>
+    // =========================================================================
+    // 1. CURRICULUM, KNOWLEDGE BASE, QUIZZES & CASE STUDIES (ALL 7 DOMAINS)
+    // =========================================================================
+    const TOPICS = [
+      {
+        id: "meta",
+        roman: "I",
+        name: "Meta Ads",
+        short: "Meta Ads",
+        icon: "megaphone",
+        subtitle: "Paid social architecture, creative diagnostics, Pixel/CAPI & auction.",
+        lessons: [
+          {
+            id: "meta-1",
+            title: "How Meta Ads Actually Work (Structure & Auction)",
+            plain: "Think of Meta Ads like hiring a street promoter outside a busy mall. You set 3 levels: **Campaign** (the goal, like 'get people to buy'), **Ad Set** (who to approach, how much to spend, and where to stand), and **Ad** (the actual pitch, photo, or video). Meta runs an instant auction every time someone scrolls. You don't just win by paying the most—Meta rewards ads people stop to watch and click.",
+            practitioner: "Modern Meta Ads relies on a simplified account structure (1–3 campaigns: Prospecting, Scaling/Advantage+ Shopping, and optional Retargeting). Broad targeting lets the algorithm use your **creative as the targeting filter**. The auction scores Total Value = Bid × Estimated Action Rate + Ad Quality. Consolidating budget helps ad sets exit the **Learning Phase** (~50 conversion events/week).",
+            executive: "Meta is a **demand-generation** engine, not a demand-capture engine. Treat it as a creative-velocity machine: media buying structure is now mostly automated (Advantage+ Shopping), so competitive advantage comes from creative testing cadence, conversion API (CAPI) signal quality, and measuring incremental lift alongside blended MER.",
+            takeaway: "Creative does 70%+ of the targeting work on Meta today. If an ad fails, fix the hook and offer before tweaking audience interests.",
+            followups: ["Next lesson: Meta Creative & Hook Rate", "Compare Meta Ads vs Google Ads", "Quiz me on Meta Ads"]
+          },
+          {
+            id: "meta-2",
+            title: "Creative Diagnostics: Hook Rate, Hold Rate & CTR",
+            plain: "Imagine a storefront window. **Hook Rate** (3-second video views ÷ impressions) is how many walkers turn their head to look in. **Hold Rate** (ThruPlays ÷ 3-sec views) is how many keep watching. **CTR (Click-Through Rate)** is how many push the door open. If people look (high hook) but don't enter (low CTR), your offer or call-to-action is weak. If nobody looks at all, change the first 3 seconds.",
+            practitioner: "Diagnose funnel leaks top-to-bottom: **CPM** tells you auction competition; **Thumbstop/Hook Rate** (aim for 25–35%+) measures first-3-second visual disruption; **Hold Rate** measures storytelling; **Outbound CTR** (aim for 1%+) measures offer curiosity; **Conversion Rate (CVR)** measures landing page alignment. Never kill an ad solely on high CPM if CPA is profitable.",
+            executive: "Creative fatigue is the #1 silent margin killer on paid social. Track creative refresh velocity weekly: establish a dedicated testing budget (15–20% of spend) feeding winning angles into scaling campaigns so rising frequency doesn't erode contribution margin.",
+            takeaway: "Fix metrics in order: Hook Rate → Hold Rate → Outbound CTR → Landing Page CVR.",
+            followups: ["Next lesson: Pixel, CAPI & Attribution", "How do I fix ad fatigue on Meta?", "Run a Meta Ads Case Study"]
+          },
+          {
+            id: "meta-3",
+            title: "Pixel, Conversions API (CAPI) & Attribution Reality",
+            plain: "The **Meta Pixel** is a little counter inside your website's browser that tells Meta 'Hey, the person who clicked your ad just bought.' Because phones now block lots of browser tracking (like iOS privacy settings), **CAPI (Conversions API)** sends that same receipt directly from your store's server to Meta's server—like handing over a paper receipt instead of relying on memory.",
+            practitioner: "Always run **Pixel + CAPI with event deduplication** (matching `event_id`) and aim for an Event Match Quality (EMQ) of 7+/10 on Purchase events. Watch your attribution window: **7-day click, 1-day view** is the default, but view-through conversions can over-credit Meta for returning customers. Compare 7-day click-only against blended store revenue.",
+            executive: "Platform-reported ROAS on Meta almost always overstates true incrementality because it takes credit for warm shoppers who would have bought via email or search. Use Meta ROAS for directional creative ranking, and use **MER (Total Revenue ÷ Total Ad Spend)** and periodic holdout tests for budget decisions.",
+            takeaway: "Better data signals (CAPI) train Meta's algorithm faster, lowering your real cost per customer.",
+            followups: ["Quiz me on Meta Ads", "Explain ROAS vs MER in P&L", "Open P&L Lab"]
+          }
+        ]
+      },
+      {
+        id: "google",
+        roman: "II",
+        name: "Google Ads",
+        short: "Google Ads",
+        icon: "search",
+        subtitle: "Search intent, Match Types, Quality Score, Negative Keywords & PMax.",
+        lessons: [
+          {
+            id: "google-1",
+            title: "Search Intent & How the Google Auction Works",
+            plain: "While Meta is a billboard on a highway, **Google Search Ads** is a helpful clerk standing right inside the aisle where a customer asks, 'Where are the running shoes?' Because the buyer already wants the product, intent is much higher. Google ranks ads using **Ad Rank = Your Bid × Quality Score**. If your ad and website closely match what the shopper typed, you can beat a competitor who bids more than you.",
+            practitioner: "Structure Search around **intent clusters** rather than single-keyword ad groups (SKAGs). **Quality Score (1–10)** is built from Expected CTR, Ad Relevance, and Landing Page Experience. Separate **Brand Search** (people searching your company name) from **Non-Brand Search** so high-ROAS branded clicks don't disguise unprofitable cold acquisition.",
+            executive: "Google Search is primarily **demand capture**. Its ceiling is capped by existing search volume, and CPCs inflate as competitors bid on the same high-intent terms. Allocate Brand Search carefully (defend against competitors without overpaying for organic traffic) and scale Non-Brand + Shopping against marginal CPA targets.",
+            takeaway: "Always split Brand vs. Non-Brand campaigns—blending them hides whether you are actually winning new customers.",
+            followups: ["Next lesson: Match Types & Negative Keywords", "Compare Google Ads vs SEO", "Quiz me on Google Ads"]
+          },
+          {
+            id: "google-2",
+            title: "Keyword Match Types & Negative Keywords",
+            plain: "Match types tell Google how strict to be with your keywords. **Exact Match** `[red roses Dubai]` means show my ad only for that exact meaning. **Phrase Match** `\"red roses\"` allows extra words before or after. **Broad Match** `red roses` lets Google guess related ideas—which can waste money on 'how to grow red roses.' **Negative Keywords** (like `-seeds`, `-free`, `-jobs`) act like a bouncer blocking irrelevant searches.",
+            practitioner: "Check your **Search Terms Report** weekly. Start tight (Exact + Phrase) when budgets are small or conversion history is low; only pair Broad Match with **Smart Bidding (tCPA / tROAS)** once you have 30–50+ clean monthly conversions. Maintain shared Negative Keyword lists (free, cheap, DIY, careers, competitor support) across campaigns.",
+            executive: "Wasted search spend is pure P&L leakage. Auditing Search Terms and maintaining negative lists is one of the fastest ways to recover 10–25% of paid search efficiency without changing creative or landing pages.",
+            takeaway: "Negative keywords save more budget in Google Ads than almost any bidding trick.",
+            followups: ["Next lesson: Shopping & Performance Max", "Quiz me on Google Ads", "Run a Google Ads Case Study"]
+          },
+          {
+            id: "google-3",
+            title: "Google Shopping Feeds & Performance Max (PMax)",
+            plain: "When you search for a product and see photos with prices at the top, that's **Google Shopping**. Instead of picking keywords, you upload a spreadsheet (called a **Product Feed**) with your product titles, photos, prices, and stock. **Performance Max (PMax)** is Google's all-in-one autopilot that runs your ads across Search, Shopping, YouTube, Gmail, and Display from one campaign.",
+            practitioner: "In Shopping and PMax, **your Product Feed IS your SEO**. Put core attributes in the first 70 characters of the title (Brand + Product Type + Key Attribute like Color/Size/Occasion). Segment PMax asset groups by **margin tier or product category** (e.g., High-Margin Bestsellers vs. Low-Margin Accessories) so Google doesn't dump all spend on cheap items.",
+            executive: "PMax can look great on paper by cannibalizing branded search and retargeting. Enforce **Brand Exclusions** in PMax, pass profit-aware conversion values (or segment by Gross Margin), and monitor Search Term Insights to ensure true new-customer acquisition.",
+            takeaway: "Clean product titles, accurate pricing, and margin-based segmentation win Google Shopping.",
+            followups: ["Quiz me on Google Ads", "Compare Meta Ads vs Google Ads", "Start TikTok Business track"]
+          }
+        ]
+      },
+      {
+        id: "tiktok",
+        roman: "III",
+        name: "TikTok Business",
+        short: "TikTok",
+        icon: "clapperboard",
+        subtitle: "Short-form native ads, Spark Ads, UGC hooks & Halo Effect.",
+        lessons: [
+          {
+            id: "tiktok-1",
+            title: "Don't Make Ads, Make TikToks (The 3-Second Rule)",
+            plain: "On TikTok, people swipe past anything that looks like a polished TV commercial in half a second. The rule is simple: **blend in like a real creator, then earn attention in the first 2–3 seconds**. Start with movement, a bold visual surprise, or a direct problem ('Stop buying flowers that die in 2 days...'). Keep sound ON—music, voiceover, and captions are half the experience.",
+            practitioner: "Structure TikTok ad creatives using the **Hook → Problem/Agitate → Demo/Proof → Clear CTA** arc in 15–30 seconds. Use native text overlays, fast visual cuts (every 2–3 seconds), and lo-fi UGC shot on a smartphone. Use the free **TikTok Creative Center** to research Top Ads by country, industry, and CTR.",
+            executive: "TikTok has lower CPMs than Meta in many markets, making it a strong top-of-funnel discovery engine—especially for visual, demonstrable products. However, creative half-life is shorter (often 7–14 days), so budget must include continuous creator/UGC production, not just media spend.",
+            takeaway: "Polished studio ads underperform raw, fast-paced, story-first creator videos on TikTok.",
+            followups: ["Next lesson: Spark Ads & Creators", "Compare TikTok vs Meta Ads", "Quiz me on TikTok Business"]
+          },
+          {
+            id: "tiktok-2",
+            title: "Spark Ads, Whitelisting & Social Proof",
+            plain: "Normally, an ad runs from your brand's account and disappears when you stop paying. **Spark Ads** let you put ad budget behind an *actual organic TikTok post* (yours or a creator's, with their permission code). All the likes, comments, shares, and profile visits stay on that real post—building lasting social proof while driving sales.",
+            practitioner: "Test organic videos first; take the top 10% by completion rate and engagement and boost them as **Spark Ads** inside Ads Manager (not just the in-app Promote button, which lacks conversion optimization). Actively reply to comments on Spark Ads—even pinning a video reply to a buyer's question lifts CVR.",
+            executive: "Spark Ads bridge organic content and paid acquisition, compounding brand equity (followers + engagement) alongside direct response. Negotiate 30–90 day Spark Ad usage codes upfront in every creator contract.",
+            takeaway: "Use Ads Manager Spark Ads on proven organic winners rather than guessing with cold dark posts.",
+            followups: ["Next lesson: Auction, Budget & Attribution", "Quiz me on TikTok Business", "Run a TikTok Case Study"]
+          },
+          {
+            id: "tiktok-3",
+            title: "TikTok Auction, Creative Fatigue & Halo Effect",
+            plain: "TikTok's algorithm learns fast, but it burns through audiences fast too. An ad that crushes it on Monday can drop off by next Wednesday because everyone in that pocket has seen it. Also, many TikTok viewers don't click the ad immediately—they close TikTok and **Google your brand name** later. That's called the **Halo Effect**.",
+            practitioner: "Launch campaigns with 3–5 distinct creative concepts per ad group (different hooks, not just button colors). Watch frequency and CPA daily; refresh hooks before CPA spikes. Use **Post-Purchase Surveys** ('How did you hear about us?') because TikTok's last-click attribution misses 30–50% of buyers who convert via Google Search or Direct.",
+            executive: "Evaluating TikTok strictly on last-click Google Analytics revenue will cause you to turn off a profitable discovery channel. Pair TikTok spend with branded search volume tracking and post-purchase attribution.",
+            takeaway: "Always measure TikTok with post-purchase surveys and branded search lift—not last-click analytics alone.",
+            followups: ["Quiz me on TikTok Business", "Start SEO track", "Open P&L Lab"]
+          }
+        ]
+      },
+      {
+        id: "seo",
+        roman: "IV",
+        name: "SEO",
+        short: "SEO",
+        icon: "globe",
+        subtitle: "Search intent, Technical SEO, On-Page, Local SEO & compounding traffic.",
+        lessons: [
+          {
+            id: "seo-1",
+            title: "The 3 Pillars of SEO (Storefront Analogy)",
+            plain: "Imagine your website is a physical shop. **Technical SEO** is making sure the front door unlocks, the lights work, and signs are readable so Google's bots can walk in and understand every shelf. **On-Page SEO** is labeling each aisle clearly with the exact words shoppers use. **Off-Page SEO** is other trusted people in town recommending your shop (backlinks and reviews).",
+            practitioner: "SEO breaks into: (1) **Technical** — crawlability, XML sitemaps, clean URLs, Core Web Vitals, mobile responsiveness, canonical tags; (2) **On-Page** — matching search intent, optimized `<title>` & H1 tags, internal linking, structured data (Product/FAQ schema); (3) **Off-Page** — high-authority editorial backlinks and brand mentions.",
+            executive: "Paid ads are renting traffic (stop paying, traffic hits zero). SEO is **building owned real estate** with a 3–9 month payback lag that structurally lowers blended CAC over time and boosts EBITDA margins.",
+            takeaway: "Technical makes you findable, On-Page makes you relevant, and Off-Page makes you trustworthy.",
+            followups: ["Next lesson: Search Intent & On-Page", "Compare SEO vs Google Ads", "Quiz me on SEO"]
+          },
+          {
+            id: "seo-2",
+            title: "Search Intent: Matching What the Buyer Actually Wants",
+            plain: "Before writing a page, Google the keyword yourself and look at the top 5 results. If someone searches 'how to keep roses fresh,' they want a quick guide (**Informational**). If they search 'same day flower delivery Dubai,' they want a category page with prices and a Buy button (**Transactional**). Sending a blog post to a buyer ready to pay loses the sale.",
+            practitioner: "Map every target keyword to one of 4 intents: **Informational, Navigational, Commercial Investigation, Transactional**. Build dedicated, fast-loading category/collection pages for transactional terms, and link informational guides internally back to those commercial pages using descriptive anchor text.",
+            executive: "Prioritize **bottom-of-funnel commercial & category pages first** for faster revenue ROI, then expand into top-of-funnel informational content to capture early-stage shoppers and build topical authority.",
+            takeaway: "Always check Page 1 of Google before creating a page—Google already tells you what format it wants to rank.",
+            followups: ["Next lesson: Local SEO & Compounding", "Quiz me on SEO", "Run an SEO Case Study"]
+          },
+          {
+            id: "seo-3",
+            title: "Local SEO & Google Business Profile",
+            plain: "If you serve a city or neighborhood, **Local SEO** is often the fastest win in marketing. Your **Google Business Profile** (the map listing with stars, hours, photos, and directions) shows up *above* normal websites. Accurate name/address/phone, fresh photos, and steady customer reviews with replies push you into the top 3 map results.",
+            practitioner: "Optimize Google Business Profile with exact primary/secondary categories, service areas, weekly photo uploads, Q&A, and a systematic review-generation flow post-delivery. Build city/area landing pages with genuine local details (delivery zones, timing, landmarks) rather than copy-pasted doorway pages.",
+            executive: "Local pack rankings capture high-intent, zero-CPC buyers ready to transact today. Track map views, direction requests, calls, and website clicks via UTM parameters on your GBP website link.",
+            takeaway: "Consistent, recent customer reviews + complete Google Business Profile beat huge competitors locally.",
+            followups: ["Quiz me on SEO", "Start Social-First Marketing track", "Open P&L Lab"]
+          }
+        ]
+      },
+      {
+        id: "social",
+        roman: "V",
+        name: "Social-First Marketing",
+        short: "Social-First",
+        icon: "sparkles",
+        subtitle: "Feed-native storytelling, community loops, dark social & creator seeding.",
+        lessons: [
+          {
+            id: "social-1",
+            title: "What 'Social-First' Actually Means",
+            plain: "Old marketing made a big glossy poster or TV spot, then awkwardly shrunk it to fit Instagram. **Social-First Marketing** flips that completely: you design the idea *for the feed first*—built around conversations, trends, behind-the-scenes stories, and things people actually want to DM to a friend.",
+            practitioner: "Social-first shifts KPIs from passive impressions to **active signals: Saves, Shares (DM sends), Comments, and Watch Time**. Build repeatable **Content Series** (e.g., 'Packing a 500-rose VIP order', '30-second founder Q&A') rather than one-off promotional graphics.",
+            executive: "Social-first lowers dependency on paid media by turning organic reach and community advocacy into a free top-of-funnel engine—and generates winning creative concepts you can immediately scale in paid ads.",
+            takeaway: "If nobody would send your post to a friend in a DM, it's a flyer, not social-first content.",
+            followups: ["Next lesson: Content Pillars & Dark Social", "Compare Social-First vs Traditional", "Quiz me on Social-First"]
+          },
+          {
+            id: "social-2",
+            title: "The 4 Content Pillars & Dark Social",
+            plain: "Nobody wants to follow a brand that only shouts 'BUY NOW 20% OFF.' Balance 4 simple buckets: **Educate** (useful tips), **Entertain** (relatable humor/stories), **Behind-the-Scenes** (how it's made, real people), and **Convert** (offers & proof). Most real word-of-mouth happens in **Dark Social**—private WhatsApp chats and Instagram DMs that analytics tools can't track.",
+            practitioner: "Use an **80/20 value-to-promo ratio**. Optimize posts for **shareability** (checklists, relatable pain points, giftable visuals) so they spread in WhatsApp/DMs. Measure dark social indirectly via direct traffic growth, branded search, and post-purchase 'How did you find us?' surveys.",
+            executive: "Community equity compounds retention and repeat purchase rate (LTV). Brands with high share-of-voice in private group chats enjoy structurally lower CAC and higher organic conversion rates.",
+            takeaway: "Educate, entertain, show the craft, then sell—and optimize for DM shares, not just likes.",
+            followups: ["Next lesson: Creator Seeding & Community", "Quiz me on Social-First", "Run a Social-First Case Study"]
+          },
+          {
+            id: "social-3",
+            title: "Creator Seeding & Turning Customers into Media",
+            plain: "Instead of paying one huge celebrity $20,000 for one stiff post, **Creator Seeding** means gifting your product to 30–50 smaller, genuine micro-creators with zero pressure—just a great unboxing experience. Even if only 10–15 post authentically, you get real trust, fresh content, and comments from real buyers.",
+            practitioner: "Run a monthly seeding program targeting micro-creators (3k–50k followers) with high comment quality, not vanity follower counts. Follow up with top performers to turn them into paid **UGC/whitelisting partners**. Feature customer photos/videos directly on product pages to lift conversion rate.",
+            executive: "Micro-creator seeding offers asymmetric ROI: low fixed cash risk (COGS + shipping only) with high upside in organic reach, social proof, and reusable paid-ad creative assets.",
+            takeaway: "50 genuine micro-creators with real engagement almost always outperform 1 overpriced mega-influencer.",
+            followups: ["Quiz me on Social-First", "Start Traditional Marketing track", "Open P&L Lab"]
+          }
+        ]
+      },
+      {
+        id: "traditional",
+        roman: "VI",
+        name: "Traditional Marketing",
+        short: "Traditional",
+        icon: "tv",
+        subtitle: "4Ps, Positioning, OOH/Billboards, Retail & Brand-to-Digital Lift.",
+        lessons: [
+          {
+            id: "trad-1",
+            title: "The Timeless Core: Positioning & The 4Ps",
+            plain: "Before any ad platform existed, marketing rested on **4 simple choices (The 4Ps)**: **Product** (what you sell and why it's better), **Price** (premium vs. value), **Place** (where people buy it—store, app, delivery), and **Promotion** (how you tell them). If your product or price is wrong, even the best digital ads only make people realize it faster.",
+            practitioner: "Strong **Positioning** answers: Who is this for, what problem does it solve, and why us instead of the default alternative? Traditional marketing excels at **Mental Availability**—making your brand the first name that pops into someone's head when a buying occasion hits (like Mother's Day or a wedding).",
+            executive: "Performance marketing harvests existing demand; traditional brand building creates **pricing power** and future demand. Research (Binet & Field) consistently shows balancing long-term brand building (~50–60%) with short-term activation (~40–50%) maximizes multi-year profit growth.",
+            takeaway: "Digital channels change every year; positioning, pricing, and clear value propositions never go out of style.",
+            followups: ["Next lesson: OOH, Retail & Offline Channels", "Compare Social-First vs Traditional", "Quiz me on Traditional"]
+          },
+          {
+            id: "trad-2",
+            title: "OOH (Billboards), Retail, Print, Radio & Direct Mail",
+            plain: "**OOH (Out-of-Home)** is billboards, bus stops, and mall screens. You have 3 seconds while someone drives by—so use **max 6–7 words, one bold image, and a huge logo**. **In-store / Packaging** is also traditional marketing: a memorable box, ribbon, or thank-you card with a QR code reaches 100% of your buyers for pennies.",
+            practitioner: "Match offline channel to context: **OOH** for mass local awareness & prestige; **Radio/Audio** for commuter frequency; **Direct Mail / Inserts** for high-margin retention & local geo-targeting; **Events/Pop-ups** for tactile sampling. Always design OOH for legibility at distance—never cram paragraphs or tiny URLs.",
+            executive: "Offline media carries high **trust halo** (consumers perceive brands on billboards or mall displays as established and credible), which directly improves click-through rates and conversion rates on digital channels.",
+            takeaway: "Your physical packaging and in-store experience are traditional media channels with a 100% open rate.",
+            followups: ["Next lesson: Measuring Offline & Brand Lift", "Quiz me on Traditional", "Run a Traditional Case Study"]
+          },
+          {
+            id: "trad-3",
+            title: "Measuring Traditional Marketing (No Clicks Needed)",
+            plain: "People can't click a billboard, so how do you know it worked? Use 4 practical clues: (1) **Branded Search Lift** (more people Googling your name during the campaign), (2) **Geo-Testing** (run billboards in City A, not City B, and compare sales), (3) **Unique QR / Promo Codes**, and (4) **Post-Purchase Surveys**.",
+            practitioner: "Combine **Geo-Lift Experiments**, dedicated vanity URLs/QR codes (with UTMs), call-tracking numbers, and **Baseline vs. Campaign Period** comparisons of Direct + Branded Search traffic. Track **Halo Effect** on digital CPA—often Meta/Google CPA drops 10–20% during strong OOH flights.",
+            executive: "Do not judge brand/OOH media by QR scans alone (typically <1% of viewers scan). Evaluate total incremental revenue and blended CAC reduction across the target geography during and 2–4 weeks after the flight.",
+            takeaway: "Measure offline media by geo-sales lift and branded search spikes—not just QR code scans.",
+            followups: ["Quiz me on Traditional", "Start P&L Management track", "Open P&L Lab"]
+          }
+        ]
+      },
+      {
+        id: "pnl",
+        roman: "VII",
+        name: "P&L Management",
+        short: "P&L Mgmt",
+        icon: "bar-chart-3",
+        subtitle: "Revenue to Net Profit, COGS, Contribution Margin, Break-Even ROAS & MER.",
+        lessons: [
+          {
+            id: "pnl-1",
+            title: "Reading a P&L From Top to Bottom (Coffee Shop Analogy)",
+            plain: "A **P&L (Profit & Loss Statement)** is just a waterfall showing where every dollar/dirham went over a month:\n1. **Net Revenue**: Cash collected after discounts & refunds.\n2. **Minus COGS** (beans, milk, cup) = **Gross Profit**.\n3. **Minus Variable Costs** (delivery fees, card fees, ads) = **Contribution Margin** (what's left to pay the bills).\n4. **Minus Fixed Costs** (rent, salaries, software) = **Net Profit (EBITDA)**.",
+            practitioner: "Separate **CM1** (Revenue − COGS), **CM2** (CM1 − Fulfillment/Shipping/Payment Fees), and **CM3** (CM2 − Paid Marketing Spend). Marketing leaders own **CM3**—the actual dollar contribution left to cover fixed overhead and generate net profit. Growing top-line revenue while CM3 shrinks means you are scaling losses.",
+            executive: "Manage the business on **Contribution Margin Dollars**, not percentage vanity metrics or top-line GMV. Every channel decision should be stress-tested against marginal CM3 after accounting for returns, discounting, and fulfillment cost inflation.",
+            takeaway: "Revenue is vanity, Gross Margin is sanity, Contribution Margin (after ads) pays the rent, and Net Profit is reality.",
+            followups: ["Next lesson: Break-Even ROAS & MER", "Open Interactive P&L Lab", "Quiz me on P&L Management"]
+          },
+          {
+            id: "pnl-2",
+            title: "Break-Even ROAS vs. MER (Why 3x ROAS Can Still Lose Money)",
+            plain: "Suppose you sell a gift box for $100. The box costs you $50 to make and $15 to ship & process payment. You only have **$35 left** before ads! If you spend $35 on ads to get that $100 sale, your ROAS is **2.86x** ($100 ÷ $35), and your profit is **$0**. That's your **Break-Even ROAS**. Anything below 2.86x loses money on every order—even though '2.5x ROAS' sounds nice!",
+            practitioner: "**Break-Even ROAS = 1 ÷ Pre-Ad Contribution Margin %**. If Gross Margin is 65% and shipping/payment fees are 12%, your pre-ad margin is 53%, so Break-Even ROAS = 1 ÷ 0.53 = **1.89x**. Always track **MER (Total Net Revenue ÷ Total Ad Spend)** alongside platform ROAS to catch attribution double-counting.",
+            executive: "Set channel targets using **Contribution-Adjusted ROAS / POAS (Profit on Ad Spend)** rather than flat revenue ROAS. High-AOV or high-margin bundles lower your break-even threshold and unlock much more aggressive ad scaling.",
+            takeaway: "Never judge a ROAS number without knowing your product margin and fulfillment costs first.",
+            followups: ["Next lesson: Profit Levers & Cash Flow", "Open Interactive P&L Lab", "Run a P&L Case Study"]
+          },
+          {
+            id: "pnl-3",
+            title: "The 4 Levers to Fix a Bleeding P&L",
+            plain: "When sales are growing but bank cash isn't, you only have 4 real levers to pull:\n1. **Raise AOV / Price** (bundles, free-shipping threshold, fewer blanket discounts).\n2. **Cut COGS & Fulfillment Waste** (supplier negotiation, packaging, fewer damaged returns).\n3. **Improve Ad Efficiency & Repeat Buyers** (better creatives + email/WhatsApp retention so you don't pay for the same customer twice).\n4. **Trim Fixed Overhead** (unused software, bloated retainers).",
+            practitioner: "Run sensitivity checks in the P&L Lab: a **5% improvement in AOV** or **3% reduction in COGS** often drops more straight to Net Profit than a 20% increase in ad spend. Also watch **Cash Conversion Cycle**—you can show a profit on the P&L and still run out of cash if inventory sits unsold for 90 days.",
+            executive: "Prioritize **unit economics before scale**. Fix leaky discounts, high return rates, and low repeat-purchase cohorts before increasing media budgets; profitable growth compounds, unprofitable growth accelerates cash burn.",
+            takeaway: "Retention (repeat orders at zero ad cost) is the fastest way to turn a break-even P&L into a healthy profit machine.",
+            followups: ["Open Interactive P&L Lab", "Quiz me on P&L Management", "Compare Meta Ads vs Google Ads"]
+          }
+        ]
+      }
+    ];
+
+    const KNOWLEDGE_BASE = [
+      {
+        keywords: ["meta vs google", "facebook vs google", "google vs meta", "difference between meta and google"],
+        topic: "meta",
+        title: "Meta Ads vs. Google Ads: Demand Creation vs. Demand Capture",
+        body: {
+          plain: "Think of **Meta Ads** as a storefront display on a busy street: people aren't shopping for you yet, so your photo/video has to stop them and spark desire (**Demand Creation**). **Google Search Ads** is a clerk answering a shopper who just asked 'Where can I buy X right now?' (**Demand Capture**).\n\n• **Use Meta** when your product is visual, giftable, new, or needs storytelling.\n• **Use Google** when people already search for your exact product or urgent service.\n• **Best combo:** Meta creates awareness and interest; Google captures the people who later search your brand or category.",
+          practitioner: "**Meta Ads** optimizes around creative-led audience discovery (higher scale ceiling, lower intent, relies on Hook Rate/CTR/CAPI). **Google Search/Shopping** captures existing high-intent queries (higher CVR, capped by search volume, relies on Keyword Intent, Negative Keywords, and Product Feed quality). Watch out for overlap: scaling Meta often lifts Google Branded Search volume.",
+          executive: "Treat Google Search as your high-efficiency **harvesting floor** and Meta as your scalable **growth ceiling**. Over-indexing on Google alone hits a volume wall; over-indexing on Meta without search capture leaks high-intent shoppers to competitors."
+        },
+        followups: ["Start Meta Ads track", "Start Google Ads track", "Compare SEO vs Google Ads"]
+      },
+      {
+        keywords: ["seo vs google ads", "google ads vs seo", "paid search vs seo", "organic vs paid"],
+        topic: "seo",
+        title: "SEO vs. Google Ads: Renting vs. Owning Traffic",
+        body: {
+          plain: "**Google Ads** is like renting a prime shopfront—you pay today, customers walk in today, and the moment you stop paying, the doors shut. **SEO** is like buying and building your own shop—it takes 3 to 9 months of steady work (great pages, fast site, reviews), but once you rank, the clicks are free and keep coming while you sleep.",
+          practitioner: "Use **Google Ads** for immediate cash flow, seasonal spikes, and **testing which keywords actually convert** before spending months writing SEO pages for them. Feed your highest-converting Google Search Terms directly into your SEO content roadmap.",
+          executive: "They are complements, not rivals. Google Ads delivers immediate, controllable volume; SEO lowers your blended CAC over a 12-month horizon and protects EBITDA when CPCs rise."
+        },
+        followups: ["Start SEO track", "Start Google Ads track", "Quiz me on SEO"]
+      },
+      {
+        keywords: ["social first vs traditional", "traditional vs social", "digital vs traditional", "offline vs online"],
+        topic: "traditional",
+        title: "Social-First Marketing vs. Traditional Marketing",
+        body: {
+          plain: "**Traditional Marketing** (billboards, TV, radio, print, retail) broadcasts one big message to a wide crowd to build trust and memory. **Social-First Marketing** starts a two-way conversation inside feeds (TikTok, Reels, YouTube Shorts) using real people, quick stories, and community replies.\n\nTraditional makes your brand feel **big and credible**; Social-First makes your brand feel **human, current, and shareable**.",
+          practitioner: "Traditional excels at broad reach, mental availability, and physical/local prestige (OOH, retail packaging). Social-First excels at rapid creative feedback loops, creator advocacy, and community retention. Smart brands use Social-First to test messages cheaply, then put proven positioning onto traditional OOH/retail touchpoints.",
+          executive: "Avoid false binaries. Traditional brand assets build pricing power and lower digital acquisition costs; social-first engines provide agile, low-cost creative velocity and organic retention."
+        },
+        followups: ["Start Social-First Marketing track", "Start Traditional Marketing track", "Quiz me on Traditional"]
+      },
+      {
+        keywords: ["roas vs mer", "mer vs roas", "what is mer", "blended roas", "marketing efficiency ratio"],
+        topic: "pnl",
+        title: "ROAS vs. MER: Platform Scoreboard vs. Real Bank Account",
+        body: {
+          plain: "**Platform ROAS** is what Meta or Google claims it sold (e.g., 'I made you $4 for every $1 spent'). The catch? If a buyer saw a TikTok, clicked a Meta ad, and Googled your name, *all three platforms* might claim credit for that single $100 order!\n\n**MER (Marketing Efficiency Ratio)** cuts through the noise: **Total Store Revenue ÷ Total Ad Spend across all channels**. It tells you the truth of the whole business.",
+          practitioner: "Use **Platform ROAS** inside an ad account to compare Ad A vs. Ad B. Use **MER** (and **aMER / New-Customer MER** = New Customer Revenue ÷ Total Ad Spend) to manage the P&L and decide whether to scale total monthly budget.",
+          executive: "Never set board-level budgets solely on platform-reported ROAS. Anchor monthly budget pacing to **Contribution-Adjusted MER** so attribution overlap never hides margin compression."
+        },
+        followups: ["Open Interactive P&L Lab", "Explain Break-Even ROAS", "Quiz me on P&L Management"]
+      },
+      {
+        keywords: ["break even roas", "breakeven roas", "break-even roas", "how to calculate roas"],
+        topic: "pnl",
+        title: "Break-Even ROAS Explained Simply",
+        body: {
+          plain: "**Break-Even ROAS** is the minimum return you need on ads just to cover the product cost, shipping, and payment fees (before rent/salaries).\n\n**Simple Example:**\n• You sell an item for **$100**.\n• Product cost (COGS) = **$40**, Shipping & card fees = **$10**.\n• Money left before ads = **$50** (50% margin).\n• Break-Even ROAS = `$100 ÷ $50` = **2.0x**.\n\nIf your ads return **2.0x**, you made $0 profit on the order. You need **above 2.0x** to actually pay fixed costs and keep profit.",
+          practitioner: "Formula: `Break-Even ROAS = 1 / Pre-Ad Contribution Margin %`. Always deduct discounts, average return rate, payment gateway fees (~2.5–3%), and pick-pack-ship costs before calculating—using raw Gross Margin alone will fool you into overbidding.",
+          executive: "Calculate Break-Even ROAS by product category, not just store average. Lower-margin SKUs require stricter bid caps or bundling to avoid dragging down blended CM3."
+        },
+        followups: ["Open Interactive P&L Lab", "Read P&L Lesson 1", "Quiz me on P&L Management"]
+      },
+      {
+        keywords: ["ad fatigue", "creative fatigue", "frequency", "roas dropped", "cpa spiked"],
+        topic: "meta",
+        title: "How to Fix Ad Fatigue (When Winning Ads Stop Working)",
+        body: {
+          plain: "Ad fatigue happens when the same people see your ad 4–5+ times and start ignoring it like wallpaper. You'll spot it when **Frequency goes up**, **CTR goes down**, and **Cost per Purchase climbs**.\n\n**Quick Fix:** Don't throw away the whole concept! Keep the winning middle/offer, and film **3 new opening hooks** (first 3 seconds), change the thumbnail/headline, or switch from a static photo to a quick creator video.",
+          practitioner: "Monitor 7-day rolling **Frequency (>3.0 on prospecting)** alongside declining Outbound CTR and rising CPM. Rotate **Hook Variations** (visual interrupt, bold text claim, different angle) before rebuilding from scratch. Broaden audience pools if targeting is too narrow.",
+          executive: "Prevent fatigue proactively by funding a weekly creative pipeline. Treat creative production as a recurring operational cost tied to spend level, not a one-time agency project."
+        },
+        followups: ["Read Meta Creative Diagnostics", "Run a Meta Ads Case Study", "Quiz me on Meta Ads"]
+      },
+      {
+        keywords: ["quality score", "ad rank", "cpc too high", "lower cpc"],
+        topic: "google",
+        title: "Quality Score & How to Lower Google Ads CPC",
+        body: {
+          plain: "Google doesn't just give the top spot to the richest bidder. It grades your ad from **1 to 10 (Quality Score)** based on 3 things: (1) Do people click it? (2) Does the ad headline match what they searched? (3) Does the landing page load fast and deliver on the promise? A higher score literally gives you a **discount on every click**.",
+          practitioner: "Audit keywords with Quality Score ≤ 5. Improve **Ad Relevance** by tightly grouping keywords and putting the primary search phrase in Headline 1. Improve **Landing Page Experience** by matching H1 copy to the ad, speeding up mobile load time (<2.5s), and removing pop-up friction.",
+          executive: "Improving average Quality Score from 5 to 8 can cut CPCs by 20–30%, directly expanding contribution margin without sacrificing impression share."
+        },
+        followups: ["Read Google Ads Lesson 2", "Run a Google Ads Case Study", "Quiz me on Google Ads"]
+      },
+      {
+        keywords: ["spark ads", "tiktok shop", "ugc", "tiktok creative", "tiktok vs meta"],
+        topic: "tiktok",
+        title: "TikTok Spark Ads & UGC Best Practices",
+        body: {
+          plain: "**Spark Ads** boost a real organic TikTok video instead of a hidden ad post, so likes, comments, and followers stick to the account. **UGC (User-Generated Content)** is video filmed by everyday customers or creators on a phone—it feels like a recommendation from a friend rather than a corporate pitch.\n\n**TikTok vs. Meta:** TikTok demands faster hooks (under 2 seconds) and native sound-on storytelling; Meta is more forgiving of static images, carousels, and longer retargeting.",
+          practitioner: "Source 5–10 UGC creators monthly, request raw footage + 3 hook variations per brief, and secure 60-day Spark Ad codes. Test organically first, then scale top watch-time posts in TikTok Ads Manager with Website Conversion optimization.",
+          executive: "TikTok works best as an upper/mid-funnel discovery engine paired with Meta retargeting and Google branded search capture."
+        },
+        followups: ["Start TikTok Business track", "Run a TikTok Case Study", "Quiz me on TikTok Business"]
+      },
+      {
+        keywords: ["contribution margin", "gross margin", "net profit", "ebitda", "cogs", "p&l", "pnl"],
+        topic: "pnl",
+        title: "Gross Margin vs. Contribution Margin vs. Net Profit",
+        body: {
+          plain: "Here's the cleanest way to keep them straight:\n• **Gross Profit** = Sales minus what the product cost to buy/make (**COGS**).\n• **Contribution Margin** = Gross Profit minus everything that rises with every order (shipping, card fees, packaging, and **ad spend**). This is the cash left to pay your fixed bills.\n• **Net Profit** = Contribution Margin minus fixed bills (rent, salaries, software). That's what you actually keep.",
+          practitioner: "Always track **CM1** (Gross), **CM2** (Post-Fulfillment), and **CM3** (Post-Marketing). If CM3 is positive and growing, scaling volume covers your fixed OpEx and drives operating leverage (higher Net Profit %).",
+          executive: "Focus leadership reviews on **CM3 Dollars** and **Fixed OpEx % of Revenue**. Scaling ads with negative CM3 destroys enterprise value even if top-line revenue doubles."
+        },
+        followups: ["Open Interactive P&L Lab", "Explain Break-Even ROAS", "Run a P&L Case Study"]
+      },
+      {
+        keywords: ["4ps", "positioning", "billboard", "ooh", "brand awareness", "brand lift"],
+        topic: "traditional",
+        title: "Traditional Marketing: 4Ps, OOH & Brand Lift",
+        body: {
+          plain: "Traditional marketing builds **memory and trust** before someone is ready to buy. Its foundation is the **4Ps** (Product, Price, Place, Promotion). For physical ads like **OOH billboards**, keep it under 7 words with one clear visual. Even though people can't click a billboard, strong brand recognition makes them **much more likely to click your Meta or Google ad** later.",
+          practitioner: "Use OOH, retail displays, and packaging inserts to build regional mental availability. Measure impact via **geo-lift tests** (comparing advertised vs. control cities) and **branded search volume spikes** rather than relying solely on QR scans.",
+          executive: "Brand investment creates pricing power (less reliance on discounting) and acts as a force multiplier on performance marketing efficiency."
+        },
+        followups: ["Start Traditional Marketing track", "Compare Social-First vs Traditional", "Quiz me on Traditional"]
+      }
+    ];
+
+    const QUIZZES = [
+      {
+        id: "q-meta-1",
+        topic: "meta",
+        question: "Your Meta video ad has a strong 38% Hook Rate (people stop scrolling), a solid 1.9% Outbound CTR (people click), but almost nobody buys on your site. What should you fix FIRST?",
+        options: [
+          "Change the first 3 seconds of the video",
+          "Audit the landing page (speed, price surprise, mobile checkout, offer match)",
+          "Switch from Broad targeting to 15 narrow interest stacks",
+          "Double the daily budget to exit the Learning Phase"
+        ],
+        correct: 1,
+        explanation: "The ad already did its job—people stopped and clicked! When clicks don't convert, the leak is on the **landing page** (slow load, unexpected shipping cost, weak trust, or mismatch with the ad promise). Doubling budget on a broken page just burns cash faster."
+      },
+      {
+        id: "q-meta-2",
+        topic: "meta",
+        question: "Why do advertisers run Meta's Conversions API (CAPI) alongside the browser Pixel?",
+        options: [
+          "To make ads appear on Google Search",
+          "To send server-side conversion data that browser privacy blocks would otherwise miss",
+          "To eliminate the need for creative testing",
+          "To guarantee a 5x ROAS automatically"
+        ],
+        correct: 1,
+        explanation: "Browser ad-blockers and iOS privacy limits drop Pixel events. **CAPI** sends conversion signals directly from your server to Meta (with deduplication), giving the algorithm cleaner data to find buyers."
+      },
+      {
+        id: "q-google-1",
+        topic: "google",
+        question: "You run a premium floral delivery brand in Dubai and use Broad Match for 'flower delivery'. Your Search Terms report shows clicks for 'free flower delivery jobs' and 'flower seeds'. What's the immediate fix?",
+        options: [
+          "Raise your daily budget so Google learns faster",
+          "Add negative keywords like 'free', 'jobs', and 'seeds' and tighten match types",
+          "Pause Google Ads completely and move to billboards",
+          "Lower your product prices by 30%"
+        ],
+        correct: 1,
+        explanation: "**Negative keywords** immediately block irrelevant searches from triggering your ads, stopping wasted spend right away. Reviewing Search Terms weekly is mandatory in Google Ads."
+      },
+      {
+        id: "q-google-2",
+        topic: "google",
+        question: "Why should you separate Brand Search campaigns from Non-Brand Search campaigns in Google Ads?",
+        options: [
+          "Google requires it by law",
+          "So high-ROAS branded clicks from existing fans don't disguise unprofitable cold customer acquisition",
+          "Brand campaigns cannot use headlines",
+          "Non-Brand campaigns don't cost money per click"
+        ],
+        correct: 1,
+        explanation: "People typing your exact brand name convert cheaply at 10x+ ROAS. Blending them with cold Non-Brand keywords makes average ROAS look great even if your Non-Brand keywords are losing money."
+      },
+      {
+        id: "q-tiktok-1",
+        topic: "tiktok",
+        question: "What is the main advantage of running a TikTok Spark Ad over a standard dark ad?",
+        options: [
+          "Spark Ads are free and require no ad budget",
+          "All likes, comments, shares, and profile visits stay permanently on the real organic post",
+          "Spark Ads bypass TikTok's ad review policies",
+          "Spark Ads only show on desktop browsers"
+        ],
+        correct: 1,
+        explanation: "**Spark Ads** amplify a real organic post (yours or a creator's), compounding authentic social proof, comments, and followers rather than losing all engagement when the ad stops."
+      },
+      {
+        id: "q-tiktok-2",
+        topic: "tiktok",
+        question: "Your TikTok Ads look weak in last-click Google Analytics, yet branded Google searches and direct sales jumped 35% since launching TikTok. What's happening?",
+        options: [
+          "TikTok ads are definitely failing and should be paused immediately",
+          "The Halo Effect — viewers discover you on TikTok and search your brand later to buy",
+          "Google Analytics is charging you double",
+          "Your SEO broke"
+        ],
+        correct: 1,
+        explanation: "TikTok is a discovery channel. Many viewers watch, remember your brand, and search Google or visit directly later. Pair TikTok with **post-purchase surveys** and branded search tracking."
+      },
+      {
+        id: "q-seo-1",
+        topic: "seo",
+        question: "Someone searches 'best corporate gift boxes Dubai'. Which page type is most likely to match search intent and convert?",
+        options: [
+          "Your company's 'About Us' history page",
+          "A dedicated Commercial Category / Landing Page showing corporate gift boxes, pricing/MOQs, and a quote/buy CTA",
+          "A 200-word press release from 2021",
+          "A PDF brochure hidden behind a login wall"
+        ],
+        correct: 1,
+        explanation: "This is **Commercial/Transactional intent**. Users want to browse options, see credibility, and request a quote or order—not read a company bio or unlock a PDF."
+      },
+      {
+        id: "q-social-1",
+        topic: "social",
+        question: "In Social-First Marketing, which engagement signal usually predicts organic reach growth better than a simple 'Like'?",
+        options: [
+          "DM Shares (Sends) and Saves",
+          "Posting the exact same static flyer every day",
+          "Turning off comments",
+          "Buying 10,000 bot followers"
+        ],
+        correct: 0,
+        explanation: "Modern social algorithms heavily weight **Shares (sends to friends)**, **Saves**, and **Watch Time** because they signal genuine value worth distributing to new audiences."
+      },
+      {
+        id: "q-trad-1",
+        topic: "traditional",
+        question: "You are designing a highway billboard (OOH) for a local same-day delivery brand. Which design rule matters most?",
+        options: [
+          "Include 5 bullet points, your full street address, and 3 phone numbers",
+          "Max 6–7 words, one bold visual, high contrast, and an unmistakable brand name",
+          "Use tiny elegant script font to look luxurious",
+          "Put a 40-character UTM link at the bottom"
+        ],
+        correct: 1,
+        explanation: "Drivers have ~3 seconds to absorb a billboard. Clarity and instant brand recognition beat clever paragraphs every time."
+      },
+      {
+        id: "q-pnl-1",
+        topic: "pnl",
+        question: "Your product sells for $100. COGS is $45 and shipping/payment fees are $15. What is your Break-Even ROAS?",
+        options: [
+          "1.50x",
+          "2.00x",
+          "2.50x",
+          "4.00x"
+        ],
+        correct: 2,
+        explanation: "Pre-ad margin is `$100 - $45 - $15 = $40` (40%). Break-Even ROAS = `1 ÷ 0.40 = 2.50x`. At 2.50x ROAS, you spend $40 on ads to make $40 in pre-ad margin = **$0 profit**."
+      },
+      {
+        id: "q-pnl-2",
+        topic: "pnl",
+        question: "Monthly revenue grew 40% after running a sitewide 25% discount + higher ad spend, yet Net Profit dropped to negative. What broke?",
+        options: [
+          "Fixed rent magically doubled",
+          "Contribution Margin (CM3) collapsed because the 25% discount came straight out of profit margin while ad costs rose",
+          "Revenue is always equal to profit",
+          "SEO stopped working"
+        ],
+        correct: 1,
+        explanation: "A 25% price discount doesn't lower your COGS or shipping—it comes **100% out of your Gross Margin**. Scaling discounted sales with paid ads is the fastest way to grow revenue while losing cash."
+      }
+    ];
+
+    const SCENARIOS = [
+      {
+        id: "case-pnl",
+        topic: "pnl",
+        title: "Case Study: Revenue Up 35%, Cash Down",
+        prompt: "You manage growth for an e-commerce gifting brand. Last month, Revenue jumped from **$60,000 to $81,000** (+35%). Meta Ads reports a shiny **3.1x ROAS** on $25,000 spend. Yet the founder says the bank balance shrank. Your COGS is 42%, shipping & payment fees are 13%, and fixed overhead is $14,000.\n\nWhat's your first move?",
+        choices: [
+          {
+            label: "A) Increase Meta budget to $35,000 since 3.1x ROAS looks strong",
+            verdict: "bad",
+            feedback: "**Direct critique:** That will bleed cash faster. Look at the unit economics: Pre-ad margin is only `100% - 42% - 13% = 45%`, so your Break-Even ROAS is `1 ÷ 0.45 = 2.22x`. At $81k revenue, 45% pre-ad margin = **$36,450**. Subtract $25,000 ads = **$11,450 Contribution Margin**, which doesn't even cover the $14,000 fixed overhead (**-$2,550 Net Loss**). Scaling ads at 3.1x without fixing margin or AOV deepens the loss."
+          },
+          {
+            label: "B) Audit MER, cut unprofitable discounts, introduce higher-margin bundles to lift AOV, and shift 20% effort to repeat-buyer retention",
+            verdict: "good",
+            feedback: "**Strong call.** Your real MER is `$81k ÷ $25k = 3.24x`, leaving $11,450 CM3 against $14,000 fixed costs (-$2,550 loss). Lifting AOV via high-margin add-ons (chocolates/cards with 75% margin) + driving repeat orders via WhatsApp/Email at near-zero CAC immediately pushes Contribution Margin above your $14,000 fixed floor."
+          },
+          {
+            label: "C) Turn off all Meta Ads immediately to save $25,000",
+            verdict: "mid",
+            feedback: "**Too extreme.** Turning off all ads saves $25,000, but if organic/repeat sales drop to $20,000, 45% margin is only $9,000—still a **-$5,000 loss** against $14,000 fixed overhead! Instead, trim the bottom 30% worst-performing ad sets while lifting margin and repeat orders."
+          }
+        ]
+      },
+      {
+        id: "case-meta",
+        topic: "meta",
+        title: "Case Study: Meta ROAS Dropped from 3.4x to 1.6x",
+        prompt: "Your best-performing Meta campaign ran profitably at 3.4x ROAS for 6 weeks. This week, ROAS fell to 1.6x. You check the dashboard: **Frequency jumped from 1.9 to 4.6**, **Hook Rate dropped from 32% to 17%**, and **Landing Page CVR stayed steady at 3.1%**.\n\nWhat's the right diagnosis and action?",
+        choices: [
+          {
+            label: "A) Rebuild the checkout page because conversion must be broken",
+            verdict: "bad",
+            feedback: "**Wrong bottleneck.** Landing Page CVR held steady at 3.1%—people who click are still buying! Touching checkout wastes engineering time while the real leak is in the feed."
+          },
+          {
+            label: "B) Diagnose Creative Fatigue — launch 3–5 fresh hooks/angles and broaden targeting",
+            verdict: "good",
+            feedback: "**Spot on.** Frequency at 4.6 + Hook Rate cut in half is textbook **creative fatigue**. The same audience is tuning out your old video. Keeping the proven offer but introducing fresh visual hooks and UGC angles will restore CTR and bring CPA back down."
+          },
+          {
+            label: "C) Narrow the audience to a 50,000-person hyper-targeted interest group",
+            verdict: "bad",
+            feedback: "**Backfires.** Making the audience smaller drives Frequency even higher (6.0+) and spikes CPMs. Broadening the audience + refreshing creative is the right move."
+          }
+        ]
+      },
+      {
+        id: "case-google",
+        topic: "google",
+        title: "Case Study: Google Ads Spend Doubled, Profit Flat",
+        prompt: "You launched a **Performance Max (PMax)** campaign alongside your Brand Search campaign. Total Google revenue looks up 20%, but Brand Search impressions dropped, and most PMax spend is going to your cheapest $18 low-margin accessory instead of your $95 flagship product.\n\nHow do you fix this?",
+        choices: [
+          {
+            label: "A) Add Brand Exclusions to PMax and split Shopping/PMax campaigns by Gross Margin / Price Tier",
+            verdict: "good",
+            feedback: "**Exact practitioner fix.** PMax naturally chases the easiest conversions—your own brand name and cheap impulse items. Adding **Brand Exclusions** forces PMax to hunt new customers, and segmenting by **margin tier** protects budget for profitable flagship products."
+          },
+          {
+            label: "B) Delete all product titles so Google writes them automatically",
+            verdict: "bad",
+            feedback: "**Avoid this.** Your Product Feed titles are the primary signal Google uses to match searches. Weak titles ruin Shopping relevance."
+          },
+          {
+            label: "C) Leave it alone—more revenue is always better",
+            verdict: "bad",
+            feedback: "**Dangerous P&L trap.** Paying ad clicks on $18 low-margin items (where shipping eats half the price) often produces negative Contribution Margin even when revenue rises."
+          }
+        ]
+      }
+    ];
+
+    // =========================================================================
+    // 2. APPLICATION STATE (In-Memory + Safe localStorage)
+    // =========================================================================
+    const STORAGE_KEY = "atelier_growth_tutor_v2";
+    const defaultState = {
+      activeTopic: "all",
+      style: "plain",
+      theme: "dark",
+      completedLessons: [],
+      answeredQuizzes: {},
+      quizScore: 0,
+      savedNotes: [],
+      currency: "USD",
+      pnl: {
+        adSpend: 20000,
+        mer: 3.5,
+        cogs: 35,
+        varCost: 12,
+        fixed: 12000
+      }
+    };
+
+    let state = loadState();
+    let messages = [];
+    let pnlChartInstance = null;
+    let msgIdCounter = 1;
+
+    function loadState() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return JSON.parse(JSON.stringify(defaultState));
+        const parsed = JSON.parse(raw);
+        return {
+          ...JSON.parse(JSON.stringify(defaultState)),
+          ...parsed,
+          pnl: { ...defaultState.pnl, ...(parsed.pnl || {}) }
+        };
+      } catch (e) {
+        return JSON.parse(JSON.stringify(defaultState));
+      }
+    }
+
+    function saveState() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      } catch (e) {
+        // Ignore storage restrictions
+      }
+    }
+
+    function applyTheme() {
+      document.documentElement.setAttribute("data-theme", state.theme);
+      const iconEl = document.getElementById("themeIcon");
+      if (iconEl) {
+        iconEl.setAttribute("data-lucide", state.theme === "dark" ? "sun" : "moon");
+      }
+      if (pnlChartInstance) {
+        pnlChartInstance.destroy();
+        pnlChartInstance = null;
+        if (!document.getElementById("pnlModal").classList.contains("hidden")) {
+          updatePnlUI();
+        }
+      }
+      if (window.lucide) lucide.createIcons();
+    }
+
+    // =========================================================================
+    // 3. HELPERS
+    // =========================================================================
+    function formatMoney(num) {
+      const sym = state.currency === "AED" ? "AED " : "$";
+      const sign = num < 0 ? "-" : "";
+      const abs = Math.round(Math.abs(num)).toLocaleString("en-US");
+      return sign + sym + abs;
+    }
+
+    function escapeHtml(str) {
+      return String(str)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    function renderMarkdownLite(text) {
+      let html = escapeHtml(text);
+      html = html.replace(/\*\*(.+?)\*\*/g, '<strong class="font-semibold" style="color: var(--text-primary);">$1</strong>');
+      html = html.replace(/`([^`]+)`/g, '<code class="font-mono-tech px-1.5 py-0.5 rounded text-[11px]" style="background: var(--bg-elevated); color: var(--accent-gold); border: 1px solid var(--border-hairline);">$1</code>');
+      html = html.replace(/\n/g, "<br>");
+      return html;
+    }
+
+    let toastTimer = null;
+    function showToast(msg) {
+      const el = document.getElementById("toast");
+      const txt = document.getElementById("toastText");
+      if (!el || !txt) return;
+      txt.textContent = msg;
+      el.classList.remove("hidden");
+      el.classList.add("flex");
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        el.classList.add("hidden");
+        el.classList.remove("flex");
+      }, 2400);
+    }
+
+    function copyTextSafe(text) {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => {
+          showToast("Copied to clipboard");
+        }).catch(() => fallbackCopy(text));
+      } else {
+        fallbackCopy(text);
+      }
+    }
+
+    function fallbackCopy(text) {
+      const ta = document.createElement("textarea");
+      ta.value = text;
+      ta.style.position = "fixed";
+      ta.style.opacity = "0";
+      document.body.appendChild(ta);
+      ta.select();
+      try {
+        document.execCommand("copy");
+        showToast("Copied to clipboard");
+      } catch (e) {
+        showToast("Unable to copy");
+      }
+      document.body.removeChild(ta);
+    }
+
+    // =========================================================================
+    // 4. SIDEBAR & DOT-MATRIX PROGRESS RENDERING
+    // =========================================================================
+    function renderSidebar() {
+      const list = document.getElementById("topicList");
+      if (!list) return;
+
+      const allLessons = TOPICS.flatMap((t) => t.lessons);
+      const totalLessons = allLessons.length;
+      const doneLessons = state.completedLessons.length;
+      const pct = totalLessons > 0 ? Math.round((doneLessons / totalLessons) * 100) : 0;
+
+      document.getElementById("overallProgressPct").textContent = pct + "%";
+      document.getElementById("overallProgressBar").style.width = pct + "%";
+      document.getElementById("lessonsDoneLabel").textContent = `${String(doneLessons).padStart(2, "0")} / ${totalLessons} LESSONS`;
+      document.getElementById("quizScoreLabel").textContent = `${state.quizScore} PTS`;
+      document.getElementById("notesCountBadge").textContent = String(state.savedNotes.length);
+
+      // Render 21-dot Nothing LED Matrix
+      const dotBar = document.getElementById("dotMatrixBar");
+      if (dotBar) {
+        dotBar.innerHTML = allLessons
+          .map((l) => {
+            const done = state.completedLessons.includes(l.id);
+            return `<span title="${escapeHtml(l.title)}" class="h-1.5 rounded-full transition-all" style="background: ${
+              done ? "var(--accent-gold)" : "var(--border-hairline)"
+            };"></span>`;
+          })
+          .join("");
+      }
+
+      // Depth toggle buttons
+      document.querySelectorAll(".style-btn").forEach((btn) => {
+        const isActive = btn.dataset.style === state.style;
+        if (isActive) {
+          btn.style.background = "var(--accent-gold)";
+          btn.style.color = "#0d0c0b";
+          btn.style.fontWeight = "700";
+        } else {
+          btn.style.background = "transparent";
+          btn.style.color = "var(--text-secondary)";
+          btn.style.fontWeight = "500";
+        }
+      });
+
+      const styleLabels = { plain: "PLAIN", practitioner: "TACTICAL", executive: "EXEC" };
+      const badge = document.getElementById("activeStyleBadge");
+      if (badge) badge.textContent = styleLabels[state.style] || "PLAIN";
+
+      // Topic navigation list
+      const isAll = state.activeTopic === "all";
+      let html = `
+        <button type="button" data-topic="all" class="topic-nav-btn w-full flex items-center justify-between px-3 py-2.5 rounded-full text-left border transition" style="background: ${
+          isAll ? "var(--accent-gold-soft)" : "transparent"
+        }; border-color: ${isAll ? "var(--accent-gold-border)" : "transparent"}; color: ${
+          isAll ? "var(--text-primary)" : "var(--text-secondary)"
+        };">
+          <span class="flex items-center gap-2.5 text-xs">
+            <span class="font-mono-tech text-[10px] w-5 text-center" style="color: var(--accent-gold);">00</span>
+            <span class="font-serif-classic tracking-[0.06em]">All Disciplines</span>
+          </span>
+          <span class="w-1.5 h-1.5 rounded-full" style="background: ${isAll ? "var(--accent-red)" : "var(--border-strong)"};"></span>
+        </button>
+      `;
+
+      TOPICS.forEach((t) => {
+        const completedInTopic = t.lessons.filter((l) => state.completedLessons.includes(l.id)).length;
+        const isActive = state.activeTopic === t.id;
+        const isFull = completedInTopic === t.lessons.length;
+        html += `
+          <button type="button" data-topic="${t.id}" class="topic-nav-btn w-full flex items-center justify-between px-3 py-2.5 rounded-full text-left border transition" style="background: ${
+            isActive ? "var(--accent-gold-soft)" : "transparent"
+          }; border-color: ${isActive ? "var(--accent-gold-border)" : "transparent"}; color: ${
+            isActive ? "var(--text-primary)" : "var(--text-secondary)"
+          };">
+            <span class="flex items-center gap-2.5 text-xs min-w-0">
+              <span class="font-serif-classic text-[11px] w-5 text-center shrink-0" style="color: var(--accent-gold);">${t.roman}</span>
+              <span class="truncate ${isActive ? "font-semibold" : ""}">${escapeHtml(t.name)}</span>
+            </span>
+            <span class="font-mono-tech text-[10px] px-1.5 py-0.5 rounded-full border shrink-0" style="border-color: ${
+              isFull ? "var(--accent-olive)" : "var(--border-hairline)"
+            }; color: ${isFull ? "var(--accent-olive)" : "var(--text-muted)"};">${completedInTopic}/${t.lessons.length}</span>
+          </button>
+        `;
+      });
+
+      list.innerHTML = html;
+
+      // Update Header Context
+      const activeObj = TOPICS.find((t) => t.id === state.activeTopic);
+      document.getElementById("activeTopicTitle").textContent = activeObj
+        ? `${activeObj.roman} · ${activeObj.name.toUpperCase()}`
+        : "ALL TRACKS · I–VII";
+      document.getElementById("activeTopicSubtitle").textContent = activeObj
+        ? activeObj.subtitle
+        : "Curriculum & P&L Advisory";
+
+      renderQuickChips();
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function renderQuickChips() {
+      const row = document.getElementById("quickChipsRow");
+      if (!row) return;
+      let chips = [];
+      if (state.activeTopic === "all") {
+        chips = [
+          "Meta Ads Lesson 1",
+          "Meta vs Google Ads",
+          "Break-Even ROAS",
+          "TikTok Spark Ads",
+          "SEO vs Google Ads"
+        ];
+      } else {
+        const t = TOPICS.find((x) => x.id === state.activeTopic);
+        const nextLesson = t.lessons.find((l) => !state.completedLessons.includes(l.id)) || t.lessons[0];
+        chips = [
+          `Start: ${nextLesson.title}`,
+          `Quiz me on ${t.short}`,
+          `Run a ${t.short} Case Study`,
+          "Open P&L Lab"
+        ];
+      }
+      row.innerHTML = chips
+        .map(
+          (c) =>
+            `<button type="button" data-prompt="${escapeHtml(c)}" class="quick-chip btn-tactile shrink-0 font-mono-tech text-[10px] tracking-[0.06em] px-3 py-1.5 rounded-full">${escapeHtml(c)}</button>`
+        )
+        .join("");
+    }
+
+    // =========================================================================
+    // 5. CHAT ENGINE & SYMMETRIC EDITORIAL RENDERING
+    // =========================================================================
+    function addMessage(msg) {
+      const item = { id: "m-" + msgIdCounter++, ...msg };
+      messages.push(item);
+      renderChatFeed();
+      return item;
+    }
+
+    function renderChatFeed() {
+      const feed = document.getElementById("chatFeed");
+      if (!feed) return;
+
+      feed.innerHTML = messages
+        .map((m) => {
+          if (m.role === "user") {
+            return `
+              <div class="max-w-3xl mx-auto flex justify-end msg-enter">
+                <div class="max-w-[85%] sm:max-w-[72%] rounded-2xl rounded-tr-xs px-4 py-2.5 text-sm leading-relaxed border" style="background: var(--user-bubble-bg); border-color: var(--user-bubble-border); color: #f2ede4;">
+                  <div class="font-mono-tech text-[9px] uppercase tracking-[0.16em] mb-1 opacity-60">INQUIRY</div>
+                  <div>${escapeHtml(m.text)}</div>
+                </div>
+              </div>
+            `;
+          }
+
+          const topicObj = TOPICS.find((t) => t.id === m.topic);
+          const tagLabel = topicObj ? `${topicObj.roman} · ${topicObj.short.toUpperCase()}` : "20_60 COACH";
+
+          // Quiz Block
+          let quizHtml = "";
+          if (m.quiz) {
+            const q = m.quiz;
+            const picked = m.selectedOption;
+            quizHtml = `
+              <div class="mt-4 pt-4 border-t space-y-2.5" style="border-color: var(--border-hairline);">
+                <div class="flex items-center justify-center gap-2 font-mono-tech text-[10px] uppercase tracking-[0.18em]" style="color: var(--accent-gold);">
+                  <span class="w-4 h-px" style="background: var(--accent-gold); opacity: 0.5;"></span>
+                  <span>EXAMINATION</span>
+                  <span class="w-4 h-px" style="background: var(--accent-gold); opacity: 0.5;"></span>
+                </div>
+                <p class="text-sm font-medium text-center leading-relaxed" style="color: var(--text-primary);">${escapeHtml(q.question)}</p>
+                <div class="space-y-2 pt-1">
+                  ${q.options
+                    .map((opt, idx) => {
+                      let border = "var(--border-hairline)";
+                      let bg = "var(--bg-elevated)";
+                      let color = "var(--text-primary)";
+                      if (picked !== undefined) {
+                        if (idx === q.correct) {
+                          border = "var(--accent-olive)";
+                          bg = "var(--accent-olive-soft)";
+                        } else if (idx === picked && idx !== q.correct) {
+                          border = "var(--accent-red)";
+                          bg = "var(--accent-red-soft)";
+                        } else {
+                          color = "var(--text-muted)";
+                        }
+                      }
+                      return `<button type="button" data-msg-id="${m.id}" data-quiz-idx="${idx}" ${
+                        picked !== undefined ? "disabled" : ""
+                      } class="quiz-opt-btn w-full text-left px-3.5 py-2.5 rounded-xl border text-xs sm:text-sm transition" style="background: ${bg}; border-color: ${border}; color: ${color};">${escapeHtml(opt)}</button>`;
+                    })
+                    .join("")}
+                </div>
+                ${
+                  picked !== undefined
+                    ? `<div class="mt-2 p-3.5 rounded-xl border text-xs leading-relaxed" style="background: ${
+                        picked === q.correct ? "var(--accent-olive-soft)" : "var(--accent-gold-soft)"
+                      }; border-color: ${
+                        picked === q.correct ? "var(--accent-olive)" : "var(--accent-gold-border)"
+                      }; color: var(--text-primary);">
+                        <strong class="font-mono-tech uppercase tracking-[0.1em] text-[10px]" style="color: ${
+                          picked === q.correct ? "var(--accent-olive)" : "var(--accent-gold)"
+                        };">${picked === q.correct ? "VERIFIED (+10 PTS) · " : "CORRECTION · "}</strong>
+                        ${renderMarkdownLite(q.explanation)}
+                      </div>`
+                    : ""
+                }
+              </div>
+            `;
+          }
+
+          // Case Study Block
+          let scenarioHtml = "";
+          if (m.scenario) {
+            const sc = m.scenario;
+            const picked = m.selectedChoice;
+            scenarioHtml = `
+              <div class="mt-4 pt-4 border-t space-y-2.5" style="border-color: var(--border-hairline);">
+                <div class="flex items-center justify-center gap-2 font-mono-tech text-[10px] uppercase tracking-[0.18em]" style="color: var(--accent-gold);">
+                  <span class="w-4 h-px" style="background: var(--accent-gold); opacity: 0.5;"></span>
+                  <span>BOARDROOM DECISION</span>
+                  <span class="w-4 h-px" style="background: var(--accent-gold); opacity: 0.5;"></span>
+                </div>
+                <div class="space-y-2">
+                  ${sc.choices
+                    .map((ch, idx) => {
+                      let border = "var(--border-hairline)";
+                      let bg = "var(--bg-elevated)";
+                      let color = "var(--text-primary)";
+                      if (picked !== undefined) {
+                        if (idx === picked) {
+                          border = ch.verdict === "good" ? "var(--accent-olive)" : ch.verdict === "mid" ? "var(--accent-gold)" : "var(--accent-red)";
+                          bg = ch.verdict === "good" ? "var(--accent-olive-soft)" : ch.verdict === "mid" ? "var(--accent-gold-soft)" : "var(--accent-red-soft)";
+                        } else {
+                          color = "var(--text-muted)";
+                        }
+                      }
+                      return `<button type="button" data-msg-id="${m.id}" data-choice-idx="${idx}" ${
+                        picked !== undefined ? "disabled" : ""
+                      } class="scenario-choice-btn w-full text-left px-3.5 py-2.5 rounded-xl border text-xs sm:text-sm transition" style="background: ${bg}; border-color: ${border}; color: ${color};">${escapeHtml(ch.label)}</button>`;
+                    })
+                    .join("")}
+                </div>
+                ${
+                  picked !== undefined
+                    ? `<div class="mt-2 p-3.5 rounded-xl border text-xs leading-relaxed" style="background: var(--bg-elevated); border-color: var(--accent-gold-border); color: var(--text-primary);">
+                        ${renderMarkdownLite(sc.choices[picked].feedback)}
+                      </div>`
+                    : ""
+                }
+              </div>
+            `;
+          }
+
+          const takeawayHtml = m.takeaway
+            ? `<div class="mt-3.5 px-3.5 py-2.5 rounded-xl border text-xs leading-relaxed" style="background: var(--accent-gold-soft); border-color: var(--accent-gold-border); color: var(--text-primary);">
+                <span class="font-mono-tech text-[10px] uppercase tracking-[0.14em] mr-1.5" style="color: var(--accent-gold);">PRINCIPLE:</span>${escapeHtml(m.takeaway)}
+              </div>`
+            : "";
+
+          const followupsHtml =
+            m.followups && m.followups.length
+              ? `<div class="mt-4 pt-3 border-t flex flex-wrap justify-center gap-1.5" style="border-color: var(--border-hairline);">
+                  ${m.followups
+                    .map(
+                      (f) =>
+                        `<button type="button" data-prompt="${escapeHtml(f)}" class="quick-chip btn-tactile font-mono-tech text-[10px] tracking-[0.05em] px-3 py-1.5 rounded-full">${escapeHtml(f)}</button>`
+                    )
+                    .join("")}
+                </div>`
+              : "";
+
+          return `
+            <article class="max-w-3xl mx-auto classical-frame rounded-3xl px-5 sm:px-6 py-4 sm:py-5 msg-enter">
+              <!-- Symmetric Card Header -->
+              <div class="flex items-center justify-between gap-2 pb-3 mb-3 border-b" style="border-color: var(--border-hairline);">
+                <span class="font-mono-tech text-[10px] uppercase tracking-[0.16em] px-2.5 py-0.5 rounded-full border" style="border-color: var(--accent-gold-border); color: var(--accent-gold); background: var(--accent-gold-soft);">${escapeHtml(tagLabel)}</span>
+                ${
+                  m.saveable !== false
+                    ? `<button type="button" data-save-msg="${m.id}" class="save-note-btn btn-tactile px-2.5 py-1 rounded-full font-mono-tech text-[10px] uppercase tracking-[0.1em] flex items-center gap-1" title="Save to Study Folio">
+                        <i data-lucide="bookmark-plus" class="w-3 h-3" style="color: var(--accent-gold);"></i>
+                        <span>Save</span>
+                      </button>`
+                    : `<span class="w-2 h-2 rounded-full" style="background: var(--accent-gold); opacity: 0.6;"></span>`
+                }
+              </div>
+
+              ${m.title ? `<h2 class="font-serif-classic text-base sm:text-lg text-center tracking-[0.04em] mb-3" style="color: var(--text-primary);">${escapeHtml(m.title)}</h2>` : ""}
+
+              <div class="text-xs sm:text-sm leading-relaxed space-y-2" style="color: var(--text-secondary);">
+                ${renderMarkdownLite(m.text)}
+              </div>
+
+              ${takeawayHtml}
+              ${quizHtml}
+              ${scenarioHtml}
+              ${followupsHtml}
+            </article>
+          `;
+        })
+        .join("");
+
+      feed.scrollTop = feed.scrollHeight;
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function markLessonComplete(lessonId) {
+      if (!state.completedLessons.includes(lessonId)) {
+        state.completedLessons.push(lessonId);
+        saveState();
+        renderSidebar();
+      }
+    }
+
+    function serveLesson(topicId, lessonIndex) {
+      const topic = TOPICS.find((t) => t.id === topicId);
+      if (!topic) return;
+      const lesson = topic.lessons[lessonIndex] || topic.lessons[0];
+      markLessonComplete(lesson.id);
+
+      const bodyText = lesson[state.style] || lesson.plain;
+      const styleNote =
+        state.style === "plain"
+          ? ""
+          : state.style === "practitioner"
+          ? " — Tactical"
+          : " — Executive";
+
+      addMessage({
+        role: "bot",
+        topic: topic.id,
+        title: `${topic.roman}.${lessonIndex + 1} · ${lesson.title}${styleNote}`,
+        text: bodyText,
+        takeaway: lesson.takeaway,
+        followups: lesson.followups
+      });
+    }
+
+    function serveQuiz(topicId) {
+      let pool = topicId && topicId !== "all" ? QUIZZES.filter((q) => q.topic === topicId) : QUIZZES;
+      const unanswered = pool.filter((q) => state.answeredQuizzes[q.id] === undefined);
+      const chosen = unanswered.length ? unanswered[0] : pool[Math.floor(Math.random() * pool.length)];
+
+      addMessage({
+        role: "bot",
+        topic: chosen.topic,
+        title: "Applied Mastery Check",
+        text: "Evaluate the real-world commercial scenario below and select the strongest course of action.",
+        quiz: chosen,
+        saveable: false,
+        followups: ["Another quiz question", "Run a Case Study", "Open P&L Lab"]
+      });
+    }
+
+    function serveScenario(topicId) {
+      let pool = topicId && topicId !== "all" ? SCENARIOS.filter((s) => s.topic === topicId) : SCENARIOS;
+      if (!pool.length) pool = SCENARIOS;
+      const chosen = pool[Math.floor(Math.random() * pool.length)];
+
+      addMessage({
+        role: "bot",
+        topic: chosen.topic,
+        title: chosen.title,
+        text: chosen.prompt,
+        scenario: chosen,
+        saveable: true,
+        followups: ["Try another Case Study", "Open P&L Lab", "Quiz me"]
+      });
+    }
+
+    function handleUserInput(rawText) {
+      const text = rawText.trim();
+      if (!text) return;
+
+      addMessage({ role: "user", text });
+      const lower = text.toLowerCase();
+
+      if (lower.includes("open p&l") || lower.includes("open interactive p&l") || lower.includes("p&l lab") || lower.includes("pnl lab") || lower.includes("simulator")) {
+        openPnlModal();
+        addMessage({
+          role: "bot",
+          topic: "pnl",
+          title: "P&L Atelier Lab Ready",
+          text: "Adjust **Ad Spend, Blended MER, COGS%, Shipping%, and Fixed Overhead** inside the ledger, then select **Diagnose This Ledger** for a direct critique of your unit economics.",
+          followups: ["Explain Break-Even ROAS", "Quiz me on P&L Management"]
+        });
+        return;
+      }
+
+      if (lower.includes("quiz") || lower.includes("test me")) {
+        const matchedTopic = detectTopic(lower) || state.activeTopic;
+        serveQuiz(matchedTopic);
+        return;
+      }
+
+      if (lower.includes("case study") || lower.includes("scenario") || lower.includes("challenge")) {
+        const matchedTopic = detectTopic(lower) || state.activeTopic;
+        serveScenario(matchedTopic);
+        return;
+      }
+
+      for (const t of TOPICS) {
+        for (let i = 0; i < t.lessons.length; i++) {
+          const l = t.lessons[i];
+          if (lower.includes(l.title.toLowerCase().slice(0, 18))) {
+            state.activeTopic = t.id;
+            saveState();
+            renderSidebar();
+            serveLesson(t.id, i);
+            return;
+          }
+        }
+      }
+
+      if (lower.startsWith("next lesson") || lower.startsWith("start ") || lower.includes("lesson 1") || lower.includes("lesson 2") || lower.includes("lesson 3")) {
+        const tId = detectTopic(lower) || (state.activeTopic !== "all" ? state.activeTopic : "meta");
+        const topic = TOPICS.find((t) => t.id === tId) || TOPICS[0];
+        state.activeTopic = topic.id;
+        saveState();
+        renderSidebar();
+
+        let idx = 0;
+        if (lower.includes("lesson 2") || lower.includes("creative") || lower.includes("match type") || lower.includes("spark") || lower.includes("intent") || lower.includes("pillar") || lower.includes("ooh") || lower.includes("break-even")) {
+          idx = 1;
+        } else if (lower.includes("lesson 3") || lower.includes("pixel") || lower.includes("capi") || lower.includes("pmax") || lower.includes("shopping") || lower.includes("auction") || lower.includes("local") || lower.includes("seeding") || lower.includes("measuring") || lower.includes("lever")) {
+          idx = 2;
+        } else {
+          const nextUnfinished = topic.lessons.findIndex((l) => !state.completedLessons.includes(l.id));
+          idx = nextUnfinished >= 0 ? nextUnfinished : 0;
+        }
+        serveLesson(topic.id, idx);
+        return;
+      }
+
+      let bestMatch = null;
+      let bestScore = 0;
+      for (const entry of KNOWLEDGE_BASE) {
+        let score = 0;
+        for (const kw of entry.keywords) {
+          if (lower.includes(kw)) {
+            score += kw.split(" ").length * 3;
+          }
+        }
+        if (score > bestScore) {
+          bestScore = score;
+          bestMatch = entry;
+        }
+      }
+
+      if (bestMatch && bestScore >= 3) {
+        addMessage({
+          role: "bot",
+          topic: bestMatch.topic,
+          title: bestMatch.title,
+          text: bestMatch.body[state.style] || bestMatch.body.plain,
+          followups: bestMatch.followups
+        });
+        return;
+      }
+
+      const detected = detectTopic(lower);
+      if (detected) {
+        const topic = TOPICS.find((t) => t.id === detected);
+        state.activeTopic = topic.id;
+        saveState();
+        renderSidebar();
+        const nextIdx = topic.lessons.findIndex((l) => !state.completedLessons.includes(l.id));
+        const idx = nextIdx >= 0 ? nextIdx : 0;
+        serveLesson(topic.id, idx);
+        return;
+      }
+
+      addMessage({
+        role: "bot",
+        topic: "all",
+        title: "Select a Discipline or Inquiry",
+        text: "Ask directly across **Meta Ads, Google Ads, TikTok Business, SEO, Social-First Marketing, Traditional Marketing, and P&L Management**.\n\nSuggested inquiries:\n• *\"Compare Meta Ads vs Google Ads\"*\n• *\"How do I calculate Break-Even ROAS?\"*\n• *\"How do I fix Meta ad fatigue?\"*\n• *\"Explain SEO from scratch\"*",
+        followups: [
+          "Start Meta Ads Lesson 1",
+          "Explain Break-Even ROAS",
+          "Compare Meta Ads vs Google Ads",
+          "Open P&L Lab"
+        ]
+      });
+    }
+
+    function detectTopic(lower) {
+      if (lower.includes("meta") || lower.includes("facebook") || lower.includes("instagram") || lower.includes("capi") || lower.includes("pixel") || lower.includes("hook rate")) return "meta";
+      if (lower.includes("google") || lower.includes("pmax") || lower.includes("search ads") || lower.includes("quality score") || lower.includes("negative keyword") || lower.includes("shopping feed")) return "google";
+      if (lower.includes("tiktok") || lower.includes("spark") || lower.includes("ugc")) return "tiktok";
+      if (lower.includes("seo") || lower.includes("backlink") || lower.includes("organic search") || lower.includes("local seo") || lower.includes("google business")) return "seo";
+      if (lower.includes("social-first") || lower.includes("social first") || lower.includes("dark social") || lower.includes("seeding") || lower.includes("content pillar") || lower.includes("community")) return "social";
+      if (lower.includes("traditional") || lower.includes("billboard") || lower.includes("ooh") || lower.includes("4p") || lower.includes("radio") || lower.includes("print") || lower.includes("tv ") || lower.includes("offline")) return "traditional";
+      if (lower.includes("p&l") || lower.includes("pnl") || lower.includes("profit") || lower.includes("margin") || lower.includes("roas") || lower.includes("mer") || lower.includes("cogs") || lower.includes("ebitda") || lower.includes("cash flow")) return "pnl";
+      return null;
+    }
+
+    // =========================================================================
+    // 6. INTERACTIVE P&L LAB LOGIC & CHART
+    // =========================================================================
+    function computePnl() {
+      const adSpend = Number(state.pnl.adSpend) || 0;
+      const mer = Number(state.pnl.mer) || 0;
+      const cogsPct = Number(state.pnl.cogs) || 0;
+      const varPct = Number(state.pnl.varCost) || 0;
+      const fixed = Number(state.pnl.fixed) || 0;
+
+      const revenue = adSpend * mer;
+      const cogs = revenue * (cogsPct / 100);
+      const grossProfit = revenue - cogs;
+      const grossMarginPct = revenue > 0 ? (grossProfit / revenue) * 100 : 0;
+
+      const varCosts = revenue * (varPct / 100);
+      const preAdCm = grossProfit - varCosts;
+      const preAdCmPct = revenue > 0 ? (preAdCm / revenue) * 100 : 0;
+
+      const cm3 = preAdCm - adSpend;
+      const cm3Pct = revenue > 0 ? (cm3 / revenue) * 100 : 0;
+
+      const netProfit = cm3 - fixed;
+      const netMarginPct = revenue > 0 ? (netProfit / revenue) * 100 : 0;
+
+      const breakEvenRoas = preAdCmPct > 0 ? 100 / preAdCmPct : null;
+
+      return {
+        adSpend, mer, cogsPct, varPct, fixed,
+        revenue, cogs, grossProfit, grossMarginPct,
+        varCosts, preAdCm, preAdCmPct,
+        cm3, cm3Pct, netProfit, netMarginPct, breakEvenRoas
+      };
+    }
+
+    function updatePnlUI() {
+      const d = computePnl();
+
+      document.getElementById("pnlAdSpendVal").textContent = formatMoney(d.adSpend);
+      document.getElementById("pnlMerVal").textContent = d.mer.toFixed(1) + "x";
+      document.getElementById("pnlCogsVal").textContent = d.cogsPct + "%";
+      document.getElementById("pnlVarVal").textContent = d.varPct + "%";
+      document.getElementById("pnlFixedVal").textContent = formatMoney(d.fixed);
+
+      document.getElementById("kpiRev").textContent = formatMoney(d.revenue);
+      document.getElementById("kpiGm").textContent = d.grossMarginPct.toFixed(1) + "%";
+      document.getElementById("kpiBeRoas").textContent = d.breakEvenRoas ? d.breakEvenRoas.toFixed(2) + "x" : "N/A";
+      document.getElementById("kpiNet").textContent = formatMoney(d.netProfit);
+
+      const netCard = document.getElementById("kpiNetCard");
+      const netVal = document.getElementById("kpiNet");
+      if (d.netProfit >= 0) {
+        netCard.style.background = "var(--accent-olive-soft)";
+        netCard.style.borderColor = "var(--accent-olive)";
+        netVal.style.color = "var(--accent-olive)";
+      } else {
+        netCard.style.background = "var(--accent-red-soft)";
+        netCard.style.borderColor = "var(--accent-red)";
+        netVal.style.color = "var(--accent-red)";
+      }
+
+      document.querySelectorAll(".currency-btn").forEach((btn) => {
+        const active = btn.dataset.currency === state.currency;
+        btn.style.background = active ? "var(--accent-gold)" : "transparent";
+        btn.style.color = active ? "#0d0c0b" : "var(--text-secondary)";
+        btn.style.fontWeight = active ? "700" : "500";
+      });
+
+      const tbl = document.getElementById("pnlSummaryTable");
+      if (tbl) {
+        tbl.innerHTML = `
+          <div class="flex justify-between font-bold" style="color: var(--text-primary);"><span>NET REVENUE</span><span>${formatMoney(d.revenue)} (100%)</span></div>
+          <div class="flex justify-between" style="color: var(--text-secondary);"><span>− PRODUCT COST (COGS)</span><span>−${formatMoney(d.cogs)} (${d.cogsPct}%)</span></div>
+          <div class="flex justify-between" style="color: var(--text-secondary);"><span>− SHIPPING &amp; FEES</span><span>−${formatMoney(d.varCosts)} (${d.varPct}%)</span></div>
+          <div class="flex justify-between" style="color: var(--text-secondary);"><span>− AD SPEND</span><span>−${formatMoney(d.adSpend)} (${d.revenue > 0 ? ((d.adSpend / d.revenue) * 100).toFixed(1) : "0.0"}%)</span></div>
+          <div class="flex justify-between font-bold border-t pt-1.5" style="border-color: var(--border-hairline); color: ${d.cm3 >= 0 ? "var(--accent-gold)" : "var(--accent-red)"};"><span>= CONTRIBUTION (CM3)</span><span>${formatMoney(d.cm3)} (${d.cm3Pct.toFixed(1)}%)</span></div>
+          <div class="flex justify-between" style="color: var(--text-secondary);"><span>− FIXED OVERHEAD</span><span>−${formatMoney(d.fixed)}</span></div>
+          <div class="flex justify-between font-bold border-t pt-1.5" style="border-color: var(--border-strong); color: ${d.netProfit >= 0 ? "var(--accent-olive)" : "var(--accent-red)"};"><span>= NET PROFIT (EBITDA)</span><span>${formatMoney(d.netProfit)} (${d.netMarginPct.toFixed(1)}%)</span></div>
+        `;
+      }
+
+      const canvas = document.getElementById("pnlChart");
+      if (canvas && window.Chart) {
+        const cs = getComputedStyle(document.documentElement);
+        const gridColor = cs.getPropertyValue("--chart-grid").trim() || "rgba(255,255,255,0.08)";
+        const tickColor = cs.getPropertyValue("--chart-tick").trim() || "#a1998d";
+        const gold = cs.getPropertyValue("--accent-gold").trim() || "#c6a76e";
+        const olive = cs.getPropertyValue("--accent-olive").trim() || "#7aa384";
+        const red = cs.getPropertyValue("--accent-red").trim() || "#d71921";
+
+        const chartData = [
+          Math.round(d.revenue),
+          Math.round(d.cogs),
+          Math.round(d.varCosts),
+          Math.round(d.adSpend),
+          Math.round(d.fixed),
+          Math.round(d.netProfit)
+        ];
+        const colors = [gold, "#6e675e", "#524c44", "#a6854c", "#3d3832", d.netProfit >= 0 ? olive : red];
+
+        if (pnlChartInstance) {
+          pnlChartInstance.data.datasets[0].data = chartData;
+          pnlChartInstance.data.datasets[0].backgroundColor = colors;
+          pnlChartInstance.update();
+        } else {
+          pnlChartInstance = new Chart(canvas.getContext("2d"), {
+            type: "bar",
+            data: {
+              labels: ["REV", "COGS", "FEES", "ADS", "FIXED", "NET"],
+              datasets: [{ label: state.currency, data: chartData, backgroundColor: colors, borderRadius: 4 }]
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              plugins: { legend: { display: false } },
+              scales: {
+                y: { grid: { color: gridColor }, ticks: { color: tickColor, font: { family: "monospace", size: 10 } } },
+                x: { grid: { display: false }, ticks: { color: tickColor, font: { family: "monospace", size: 10 } } }
+              }
+            }
+          });
+        }
+      }
+    }
+
+    function openPnlModal() {
+      const modal = document.getElementById("pnlModal");
+      if (!modal) return;
+      document.getElementById("pnlAdSpend").value = state.pnl.adSpend;
+      document.getElementById("pnlMer").value = state.pnl.mer;
+      document.getElementById("pnlCogs").value = state.pnl.cogs;
+      document.getElementById("pnlVar").value = state.pnl.varCost;
+      document.getElementById("pnlFixed").value = state.pnl.fixed;
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+      updatePnlUI();
+    }
+
+    function closePnlModal() {
+      const modal = document.getElementById("pnlModal");
+      if (!modal) return;
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+    }
+
+    function diagnoseCurrentPnl() {
+      const d = computePnl();
+      closePnlModal();
+
+      let diagnosis = `**Ledger Snapshot:** Revenue **${formatMoney(d.revenue)}** | Ad Spend **${formatMoney(d.adSpend)}** (${d.mer.toFixed(1)}x MER) | Gross Margin **${d.grossMarginPct.toFixed(1)}%** | Contribution Margin (CM3) **${formatMoney(d.cm3)}** | Net Profit **${formatMoney(d.netProfit)}** (${d.netMarginPct.toFixed(1)}%).\n\n`;
+
+      if (d.preAdCmPct <= 0) {
+        diagnosis += "**Critical Red Flag:** Your COGS + Variable Fees exceed 100% of revenue. You lose money before spending a single cent on ads. Raise prices or cut product/shipping costs immediately.";
+      } else if (d.cm3 <= 0) {
+        diagnosis += `**Bleeding on Ads:** Your MER (${d.mer.toFixed(1)}x) is at or below your Break-Even ROAS (**${d.breakEvenRoas.toFixed(2)}x**). Every extra dollar of ad spend shrinks cash. Fix creative CTR/CVR, kill low-margin SKUs, or lift AOV before scaling.`;
+      } else if (d.netProfit < 0) {
+        diagnosis += `**Unit Economics Work, Overhead Too Heavy:** Your MER (${d.mer.toFixed(1)}x) beats Break-Even ROAS (**${d.breakEvenRoas.toFixed(2)}x**), generating **${formatMoney(d.cm3)}** in Contribution Margin. However, Fixed Overhead (**${formatMoney(d.fixed)}**) consumes it all. You need higher volume at this same efficiency or leaner fixed costs.`;
+      } else if (d.netMarginPct < 10) {
+        diagnosis += `**Profitable, Thin Buffer:** You're clearing **${formatMoney(d.netProfit)}** (${d.netMarginPct.toFixed(1)}% net margin). A small CPM spike could wipe this out. Focus on repeat orders (email/WhatsApp) and trimming 2–3% from COGS or shipping to build a 15%+ cushion.`;
+      } else {
+        diagnosis += `**Healthy, Scalable Ledger:** You're generating a strong **${d.netMarginPct.toFixed(1)}% net margin** well above your **${d.breakEvenRoas.toFixed(2)}x** Break-Even ROAS. You have headroom to reinvest into fresh Meta/TikTok creatives and SEO while holding MER above ${(d.breakEvenRoas * 1.35).toFixed(2)}x.`;
+      }
+
+      addMessage({
+        role: "bot",
+        topic: "pnl",
+        title: "P&L Ledger Diagnosis",
+        text: diagnosis,
+        followups: ["Open P&L Lab", "Read P&L Lesson 3: Profit Levers", "Quiz me on P&L Management"]
+      });
+    }
+
+    // =========================================================================
+    // 7. STUDY FOLIO MODAL
+    // =========================================================================
+    function openNotesModal() {
+      const modal = document.getElementById("notesModal");
+      const list = document.getElementById("notesListContainer");
+      if (!modal || !list) return;
+
+      if (!state.savedNotes.length) {
+        list.innerHTML = `<div class="text-center py-12 font-mono-tech text-xs uppercase tracking-[0.12em]" style="color: var(--text-muted);">No entries archived yet. Select SAVE on any lesson card.</div>`;
+      } else {
+        list.innerHTML = state.savedNotes
+          .map(
+            (n) => `
+            <div class="p-4 rounded-2xl border space-y-2" style="background: var(--bg-elevated); border-color: var(--border-hairline);">
+              <div class="flex items-center justify-between gap-2">
+                <span class="font-serif-classic text-sm" style="color: var(--text-primary);">${escapeHtml(n.title)}</span>
+                <button type="button" data-del-note="${n.id}" class="del-note-btn font-mono-tech text-[10px] uppercase tracking-[0.1em] transition" style="color: var(--accent-red);">Remove</button>
+              </div>
+              <div class="text-xs leading-relaxed" style="color: var(--text-secondary);">${renderMarkdownLite(n.text)}</div>
+            </div>
+          `
+          )
+          .join("");
+      }
+
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+    }
+
+    function closeNotesModal() {
+      const modal = document.getElementById("notesModal");
+      if (!modal) return;
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+    }
+
+    // =========================================================================
+    // 8. MOBILE SIDEBAR & INITIALIZATION
+    // =========================================================================
+    function openMobileSidebar() {
+      document.getElementById("sidebar").classList.remove("-translate-x-full");
+      document.getElementById("sidebarBackdrop").classList.remove("hidden");
+    }
+
+    function closeMobileSidebar() {
+      document.getElementById("sidebar").classList.add("-translate-x-full");
+      document.getElementById("sidebarBackdrop").classList.add("hidden");
+    }
+
+    function startWelcomeMessage() {
+      messages = [];
+      addMessage({
+        role: "bot",
+        topic: "all",
+        title: "20_60 Cookin · High-Key Enlightening Growth & P&L",
+        text: "Master **Meta Ads, Google Ads, TikTok Business, SEO, Social-First Marketing, Traditional Marketing, and P&L Management** with zero fluff.\n\nLessons open in **Plain English** with physical-world analogies; switch to **Tactical** or **Exec** register anytime in the left rail. Select a Roman-numbered discipline, test your instincts with a Case Study, or stress-test your numbers in the **P&L Atelier Lab**.",
+        saveable: false,
+        followups: [
+          "Start Meta Ads Lesson 1",
+          "Explain Break-Even ROAS",
+          "Compare Meta Ads vs Google Ads",
+          "Quiz me",
+          "Open P&L Lab"
+        ]
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      applyTheme();
+      renderSidebar();
+      startWelcomeMessage();
+
+      document.getElementById("openSidebarBtn").addEventListener("click", openMobileSidebar);
+      document.getElementById("closeSidebarBtn").addEventListener("click", closeMobileSidebar);
+      document.getElementById("sidebarBackdrop").addEventListener("click", closeMobileSidebar);
+
+      document.getElementById("themeToggleBtn").addEventListener("click", () => {
+        state.theme = state.theme === "dark" ? "light" : "dark";
+        saveState();
+        applyTheme();
+        showToast(state.theme === "dark" ? "Nocturne Obsidian" : "Alabaster Travertine");
+      });
+
+      document.getElementById("topicList").addEventListener("click", (e) => {
+        const btn = e.target.closest(".topic-nav-btn");
+        if (!btn) return;
+        const topicId = btn.dataset.topic;
+        state.activeTopic = topicId;
+        saveState();
+        renderSidebar();
+        closeMobileSidebar();
+
+        if (topicId !== "all") {
+          const t = TOPICS.find((x) => x.id === topicId);
+          const nextIdx = t.lessons.findIndex((l) => !state.completedLessons.includes(l.id));
+          serveLesson(topicId, nextIdx >= 0 ? nextIdx : 0);
+        }
+      });
+
+      document.getElementById("styleToggleGroup").addEventListener("click", (e) => {
+        const btn = e.target.closest(".style-btn");
+        if (!btn) return;
+        state.style = btn.dataset.style;
+        saveState();
+        renderSidebar();
+        const names = { plain: "Plain English", practitioner: "Tactical", executive: "Executive" };
+        showToast(`Register: ${names[state.style]}`);
+      });
+
+      const form = document.getElementById("chatForm");
+      const input = document.getElementById("chatInput");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const val = input.value;
+        input.value = "";
+        input.style.height = "auto";
+        handleUserInput(val);
+      });
+
+      input.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" && !e.shiftKey) {
+          e.preventDefault();
+          form.dispatchEvent(new Event("submit"));
+        }
+      });
+
+      input.addEventListener("input", () => {
+        input.style.height = "auto";
+        input.style.height = Math.min(input.scrollHeight, 128) + "px";
+      });
+
+      document.body.addEventListener("click", (e) => {
+        const chip = e.target.closest(".quick-chip");
+        if (chip) {
+          handleUserInput(chip.dataset.prompt);
+          return;
+        }
+
+        const quizBtn = e.target.closest(".quiz-opt-btn");
+        if (quizBtn) {
+          const msgId = quizBtn.dataset.msgId;
+          const idx = Number(quizBtn.dataset.quizIdx);
+          const msg = messages.find((m) => m.id === msgId);
+          if (msg && msg.quiz && msg.selectedOption === undefined) {
+            msg.selectedOption = idx;
+            const isCorrect = idx === msg.quiz.correct;
+            if (state.answeredQuizzes[msg.quiz.id] === undefined) {
+              state.answeredQuizzes[msg.quiz.id] = isCorrect;
+              if (isCorrect) state.quizScore += 10;
+              saveState();
+              renderSidebar();
+            }
+            renderChatFeed();
+          }
+          return;
+        }
+
+        const scBtn = e.target.closest(".scenario-choice-btn");
+        if (scBtn) {
+          const msgId = scBtn.dataset.msgId;
+          const idx = Number(scBtn.dataset.choiceIdx);
+          const msg = messages.find((m) => m.id === msgId);
+          if (msg && msg.scenario && msg.selectedChoice === undefined) {
+            msg.selectedChoice = idx;
+            renderChatFeed();
+          }
+          return;
+        }
+
+        const saveBtn = e.target.closest(".save-note-btn");
+        if (saveBtn) {
+          const msgId = saveBtn.dataset.saveMsg;
+          const msg = messages.find((m) => m.id === msgId);
+          if (msg) {
+            const exists = state.savedNotes.some((n) => n.id === msg.id);
+            if (!exists) {
+              state.savedNotes.unshift({
+                id: msg.id,
+                title: msg.title || "Study Note",
+                topic: msg.topic || "all",
+                text: msg.text + (msg.takeaway ? "\n\nPrinciple: " + msg.takeaway : "")
+              });
+              saveState();
+              renderSidebar();
+              showToast("Archived to Study Folio");
+            } else {
+              showToast("Already in Study Folio");
+            }
+          }
+          return;
+        }
+
+        const delNoteBtn = e.target.closest(".del-note-btn");
+        if (delNoteBtn) {
+          const noteId = delNoteBtn.dataset.delNote;
+          state.savedNotes = state.savedNotes.filter((n) => n.id !== noteId);
+          saveState();
+          renderSidebar();
+          openNotesModal();
+          showToast("Entry removed");
+          return;
+        }
+      });
+
+      document.getElementById("quickQuizBtn").addEventListener("click", () => serveQuiz(state.activeTopic));
+      document.getElementById("quickScenarioBtn").addEventListener("click", () => serveScenario(state.activeTopic));
+      document.getElementById("clearChatBtn").addEventListener("click", () => {
+        startWelcomeMessage();
+        showToast("Dialogue cleared");
+      });
+
+      document.getElementById("resetProgressBtn").addEventListener("click", () => {
+        const currentTheme = state.theme;
+        state = JSON.parse(JSON.stringify(defaultState));
+        state.theme = currentTheme;
+        saveState();
+        renderSidebar();
+        startWelcomeMessage();
+        showToast("Progress reset");
+      });
+
+      document.getElementById("openPnlLabBtn").addEventListener("click", () => {
+        closeMobileSidebar();
+        openPnlModal();
+      });
+      document.getElementById("closePnlModalBtn").addEventListener("click", closePnlModal);
+      document.getElementById("diagnosePnlBtn").addEventListener("click", diagnoseCurrentPnl);
+
+      ["pnlAdSpend", "pnlMer", "pnlCogs", "pnlVar", "pnlFixed"].forEach((id) => {
+        const map = { pnlAdSpend: "adSpend", pnlMer: "mer", pnlCogs: "cogs", pnlVar: "varCost", pnlFixed: "fixed" };
+        document.getElementById(id).addEventListener("input", (e) => {
+          state.pnl[map[id]] = Number(e.target.value);
+          saveState();
+          updatePnlUI();
+        });
+      });
+
+      document.querySelectorAll(".currency-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          state.currency = btn.dataset.currency;
+          saveState();
+          updatePnlUI();
+        });
+      });
+
+      document.getElementById("openNotesBtn").addEventListener("click", () => {
+        closeMobileSidebar();
+        openNotesModal();
+      });
+      document.getElementById("closeNotesModalBtn").addEventListener("click", closeNotesModal);
+      document.getElementById("copyAllNotesBtn").addEventListener("click", () => {
+        if (!state.savedNotes.length) {
+          showToast("No notes to copy");
+          return;
+        }
+        const combined = state.savedNotes
+          .map((n) => `## ${n.title}\n${n.text}`)
+          .join("\n\n---\n\n");
+        copyTextSafe(combined);
+      });
+    });
+  </script>
+</body>
+</html>
